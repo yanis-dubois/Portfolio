@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  /* Palette Primary */
+  --color-primary-bright: #D2B0FF;
+  --color-primary-light: #B09AFF;
+  --color-primary: #9683EC; /* DEFAULT */
+  --color-primary-dark: #5F61BB;
+  --color-primary-deep: #343E92;
+
+  /* Palette Light */
+  --color-light: #FBFBFB; /* DEFAULT */
+  --color-light-soft: #D0D0D0;
+  --color-light-dark: #808080;
+
+  /* Palette Dark */
+  --color-dark-soft: #232323;
+  --color-dark: #191919; /* DEFAULT */
+  --color-dark-deep: #101010;
+}
+
+@theme inline {
+  /* Palette Primary */
+  --color-primary-bright: var(--color-primary-bright);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary: var(--color-primary); /* DEFAULT */
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-deep: var(--color-primary-deep);
+
+  /* Palette Light */
+  --color-light: var(--color-light); /* DEFAULT */
+  --color-light-soft: var(--color-light-soft);
+  --color-light-dark: var(--color-light-dark);
+
+  /* Palette Dark */
+  --color-dark-soft: var(--color-dark-soft);
+  --color-dark: var(--color-dark); /* DEFAULT */
+  --color-dark-deep: var(--color-dark-deep);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #101010;
+    --foreground: #FBFBFB;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

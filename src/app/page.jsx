@@ -1,12 +1,13 @@
-// App.js
-import React from "react";
-import {Section, Card, Studies, Projects, Link} from "./components/ui"
+import Image from "next/image";
+import {Section, Card, Studies, Projects, Link} from "../utils/ui.jsx"
 
-export default function App() {
+export default function Home() {
   return (
     <div className="min-h-screen text-light">
 
       {/* Header */}
+      {/* --------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------- */}
       <header className="p-6 bg-dark text-light h-screen flex items-center justify-center">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-8xl font-bold">Yanis Dubois</h1>
@@ -15,9 +16,12 @@ export default function App() {
       </header>
 
       {/* Main */}
+      {/* --------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------- */}
       <main>
 
         {/* Introduction */}
+        {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark-soft text-light-soft" body="flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-3xl font-bold m-4">Introduction</h1>
 
@@ -49,6 +53,7 @@ export default function App() {
             </div>
 
             {/* Formation */}
+            {/* --------------------------------------------------------------------------- */}
             <Card title="🎓 Formation" body="col-span-2">
               <Studies 
                 title="Master informatique"
@@ -79,6 +84,7 @@ export default function App() {
         </Section>
 
         {/* Compétences */}
+        {/* --------------------------------------------------------------------------- */}
         <Section background="bg-fixed bg-cover bg-center" image="images/background/katanaZero.png" body="min-h-[80vh] flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-4xl font-bold mb-12">⚙️ Compétences</h1>
           <div className="grid gap-6 md:grid-cols-3">
@@ -88,7 +94,7 @@ export default function App() {
                 Mon parcours m’a conduit à développer principalement en C, C++, C#, Java, Python et OpenGL, aussi bien pour la création d’applications que pour la mise en œuvre de preuves de concepts.
               </p>
               <p className="">
-                J’ai également de bonnes bases en développement web (HTML, CSS, JavaScript) ainsi qu’en manipulation de bases de données relationnelles via SQL.
+                J’ai également de bonnes bases en développement web (HTML, CSS, JavaScript, React, Next.js, Tailwind) ainsi qu’en manipulation de bases de données relationnelles via SQL.
               </p>
             </Card>
 
@@ -117,6 +123,7 @@ export default function App() {
         </Section>
 
         {/* Loisirs */}
+        {/* --------------------------------------------------------------------------- */}
         <Section background="bg-fixed bg-cover bg-center" image="images/background/scavengersReign.png" body="min-h-[80vh] flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-4xl font-bold mb-12">🎲 Loisirs</h1>
           <div className="grid gap-6 md:grid-cols-3">
@@ -152,15 +159,16 @@ export default function App() {
         </Section>
 
         {/* Projets Pro */}
+        {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark-deep">
           <h1 className="text-light text-3xl font-bold mb-12 mt-12">🖥️ Projets universitaires et professionnels</h1>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Card title="Projets" type="project" image="images/projects/materialSimulation/result.png">
+            <Card type="project" image="images/projects/materialSimulation/result.png">
               <Projects
                 title="🦋 Simulation de l’apparence de matériaux bio-inspirés"
                 place="Inria, Bordeaux"
-                date="Mai - Septembre 2024"
+                date="Mai - Septembre, 2024"
                 keywords={["Computer Graphics", "Blender", "3D Modeling"]}
               />
             </Card>
@@ -168,6 +176,7 @@ export default function App() {
         </Section>
 
         {/* Projets Perso */}
+        {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark-deep">
           <hr className="border-light-dark" />
           <h1 className="text-light text-3xl font-bold mb-12 mt-12">💻 Projets personnels</h1>
@@ -183,17 +192,20 @@ export default function App() {
         </Section>
 
         {/* Contact */}
+        {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
-            <Link emoji="📨" title="Envoyez-moi un e-mail" url={""}/>
-            <Link emoji="📄" title="Consultez mon CV" url={""}/>
-            <Link emoji="🌐" title="Accédez à mon GitHub" url={""}/>
+            <Link emoji="📨" title="Envoyez-moi un e-mail" url={null}/>
+            <Link emoji="📄" title="Consultez mon CV" url={null}/>
+            <Link emoji="🌐" title="Accédez à mon GitHub" url={null}/>
           </div>
         </Section>
 
       </main>
 
       {/* Footer */}
+      {/* --------------------------------------------------------------------------- */}
+      {/* --------------------------------------------------------------------------- */}
       <footer className="bg-dark-soft p-6 text-center text-sm text-light-dark">
         © 2025 Yanis Dubois — Libre et Open Source
       </footer>

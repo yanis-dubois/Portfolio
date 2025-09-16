@@ -14,7 +14,7 @@ export function Section({ children, background = "", body = "", image = ""}) {
     );
 }
 
-export function Card({ children, title, body = "", variant = "opaque", type = "", image = ""}) {
+export function Card({ children, title, body = "", variant = "opaque", type = "", image = null}) {
     const base = `text-light-soft border border-light-soft/10 shadow-md rounded-2xl ${body}`;
     const styles = {
         opaque: `${base} bg-dark`,
@@ -47,13 +47,13 @@ export function Projects({ title, place, date, keywords }) {
         <div>
             {title && <h2 className="text-light text-xl font-bold">{title}</h2>}
 
-            <p className="flex pt-2 pb-2">
+            <div className="flex pt-2 pb-2">
                 {keywords.map((word, index) => (
-                    <p className="pr-1"><code className="px-2 py-1 bg-dark-soft text-primary-dark rounded-md font-mono text-sm">
+                    <p key={index} className="pr-1"><code className="px-2 py-1 bg-dark-soft text-primary-dark rounded-md font-mono text-sm">
                         {word}
                     </code></p>
                 ))}
-            </p>
+            </div>
 
             <div className="flex items-center">
                 <div>
