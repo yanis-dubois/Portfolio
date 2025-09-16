@@ -1,5 +1,5 @@
-import Image from "next/image";
-import {Section, Card, Studies, Projects, Link} from "../utils/ui.jsx"
+import Link from "next/link";
+import {Section, Card, Studies, Projects, Links, Footer} from "../utils/ui.jsx"
 
 export default function Home() {
   return (
@@ -23,13 +23,10 @@ export default function Home() {
         {/* Introduction */}
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark-soft text-light-soft" body="flex flex-col items-center justify-center">
-          <h1 className="text-center text-light text-3xl font-bold m-4">Introduction</h1>
-
           <div className="grid grid-cols-5 gap-8">
             {/* Présentation */}
             <div className="col-span-3">
-              <h2 className="text-light text-xl font-bold mb-4">👤 Présentation</h2>
-              <code className="rounded font-mono py-0.5 bg-dark-deep text-primary-bright">[TODO : réécrire et ajouter de la forme (structure, couleur, gras, surligné, ...)]</code>
+              <h2 className="text-light text-4xl font-bold mb-4 mt-4">👤 Présentation</h2>
               <p className="mb-4 text-justify">
                 Diplômé d’un master en informatique, je suis fasciné par les différentes 
                 applications que l’on peut donner aux mathématiques. C’est l’aspect concret 
@@ -53,7 +50,6 @@ export default function Home() {
             </div>
 
             {/* Formation */}
-            {/* --------------------------------------------------------------------------- */}
             <Card title="🎓 Formation" body="col-span-2">
               <Studies 
                 title="Master informatique"
@@ -85,7 +81,7 @@ export default function Home() {
 
         {/* Compétences */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-fixed bg-cover bg-center" image="images/background/katanaZero.png" body="min-h-[80vh] flex flex-col items-center justify-center">
+        <Section background="bg-fixed bg-cover bg-center" image="/images/background/katanaZero.png" body="min-h-[80vh] flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-4xl font-bold mb-12">⚙️ Compétences</h1>
           <div className="grid gap-6 md:grid-cols-3">
 
@@ -110,7 +106,7 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card title="📚 Académiques" variant="translucent">
+            <Card title="📖 Académiques" variant="translucent">
               <p className="mb-2">
                Ma formation m’a habitué à lire, analyser et synthétiser des articles scientifiques, mais aussi à en rédiger.
               </p>
@@ -164,12 +160,43 @@ export default function Home() {
           <h1 className="text-light text-3xl font-bold mb-12 mt-12">🖥️ Projets universitaires et professionnels</h1>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Card type="project" image="images/projects/materialSimulation/result.png">
+            <Card type="project" image="/images/projects/materialSimulation/result.png">
               <Projects
-                title="🦋 Simulation de l’apparence de matériaux bio-inspirés"
+                title="🦋 Simulation de matériaux bio-inspirés"
                 place="Inria, Bordeaux"
                 date="Mai - Septembre, 2024"
                 keywords={["Computer Graphics", "Blender", "3D Modeling"]}
+                pageLink="/projects/materialSimulation"
+              />
+            </Card>
+
+            <Card type="project" image="/images/projects/AR/XR_visulizer.png">
+              <Projects
+                title="👓 Visualisation d’objets 3D en réalité mixte"
+                place="LaBRI, Bordeaux"
+                date="Février - Avril, 2024"
+                keywords={["Mixte Reality", "Unity", "Slicer3D", "C#"]}
+                pageLink="/projects/AR"
+              />
+            </Card>
+
+            <Card type="project" image="/images/projects/depthImageProcessing/indoorTotoro_mask.png">
+              <Projects
+                title="📷 Traitement d’images optiques 2.5D"
+                place="LaBRI, Bordeaux"
+                date="Février - Avril, 2023"
+                keywords={["Image Processing", "Deep Learning", "Python"]}
+                pageLink="/projects/depthImageProcessing"
+              />
+            </Card>
+
+            <Card type="project" image="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png">
+              <Projects
+                title="📚 Analyse de bibliothèque"
+                place="CNRS, Bordeaux"
+                date="Avril - Mai, 2021"
+                keywords={["Computer Vision", "Android Studio", "Python"]}
+                pageLink="/projects/bookshelfAnalysis"
               />
             </Card>
           </div>
@@ -182,11 +209,23 @@ export default function Home() {
           <h1 className="text-light text-3xl font-bold mb-12 mt-12">💻 Projets personnels</h1>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Card title="" type="project" >
-              <p className="mb-4">
-                Découvrez mes projets réalisés en stage, en master et lors de Game
-                Jams.
-              </p>
+            <Card type="project" image="/images/projects/minecraftShader/galerie/surface/coverON.png">
+              <Projects
+                title="🌄 Développement de Shader"
+                date="Octobre 2024 - Juin 2025"
+                keywords={["Game Development", "Real Time Rendering", "OpenGL"]}
+                pageLink="/projects/minecraftShader"
+              />
+            </Card>
+
+            <Card type="project" image="/images/projects/videoGame/chronoCriminal.png">
+              <Projects
+                title="🎮 Création de jeu vidéo"
+                place="Guilde du dé libéré"
+                date="Octobre 2023"
+                keywords={["Game Development", "Game Jam", "Godot"]}
+                pageLink="/projects/videoGame"
+              />
             </Card>
           </div>
         </Section>
@@ -195,9 +234,9 @@ export default function Home() {
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
-            <Link emoji="📨" title="Envoyez-moi un e-mail" url={null}/>
-            <Link emoji="📄" title="Consultez mon CV" url={null}/>
-            <Link emoji="🌐" title="Accédez à mon GitHub" url={null}/>
+            <Links emoji="📨" title="Envoyez-moi un e-mail" url={null}/>
+            <Links emoji="📄" title="Consultez mon CV" url={null}/>
+            <Links emoji="🌐" title="Accédez à mon GitHub" url={null}/>
           </div>
         </Section>
 
@@ -206,9 +245,7 @@ export default function Home() {
       {/* Footer */}
       {/* --------------------------------------------------------------------------- */}
       {/* --------------------------------------------------------------------------- */}
-      <footer className="bg-dark-soft p-6 text-center text-sm text-light-dark">
-        © 2025 Yanis Dubois — Libre et Open Source
-      </footer>
+      <Footer/>
     </div>
   );
 }
