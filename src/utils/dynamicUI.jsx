@@ -51,30 +51,23 @@ export function TableOfContents() {
     return () => observer.disconnect();
   }, [headings]);
 
-  // calculate the scroll percentage
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      const percent = scrollTop / docHeight;
-      setScrollPercent(percent);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <aside
-      className="fixed left-0 top-1/2 -translate-y-1/2 max-h-[80vh] max-w-[350px]"
+      className="hidden lg:block fixed left-0 top-1/2 -translate-y-1/2 max-h-[80vh] max-w-[350px]"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
 
       {/* hiden */}
-      <div className="flex flex-col justify-center h-full px-2 space-y-3 pl-6">
+      <div className={`flex flex-col justify-center h-full px-2 space-y-3 pl-6
+        will-change-transform
+        transition-opacity duration-300 ease-out
+        ${isOpen 
+          ? "opacity-0"
+          : "opacity-100"
+        }
+        `}
+      >
         {headings.map((h, idx) => (
           <span
             key={idx}
@@ -94,7 +87,7 @@ export function TableOfContents() {
 
       {/* showed */}
       <nav className={`max-h-[80vh] w-[250px] fixed top-1/2 -translate-y-1/2 overflow-y-auto 
-        bg-dark-deep/70 backdrop-blur-sm border border-light-soft/10 rounded-2xl shadow-md 
+        bg-dark border border-light-soft/10 rounded-2xl shadow-md 
         ml-4 p-2 pt-4 pb-4 text-sm space-y-2 z-10
         transition-all duration-300 ease-out transform
         ${isOpen 
@@ -107,16 +100,16 @@ export function TableOfContents() {
           {headings.map((h) => (
             <a key={h.id} href={`#${h.id}`}>
               <li
-                className={`px-2 py-0.25 text-light-soft hover:bg-dark-soft rounded-md
+                className={`px-2 py-0.25 text-light-dark hover:bg-dark-soft rounded-md
                 ${
-                  activeId === h.id ? "text-primary hover:text-primary-light" : "text-light-dark hover:text-light"
+                  activeId === h.id ? "text-primary hover:text-primary-light" : "text-light-dark hover:text-light-soft"
                 }
                 ${
                   h.level === "h1"
                     ? "ml-0"
                     : h.level === "h2"
-                    ? "ml-4"
-                    : "ml-8"
+                    ? "ml-2"
+                    : "ml-4"
                 }`}
               >
                 {h.text}
