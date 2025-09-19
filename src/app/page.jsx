@@ -111,7 +111,7 @@ export default function Home() {
 
         {/* Loisirs */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-fixed bg-cover bg-center" image="images/background/scavengersReign.png" body="min-h-[80vh] flex flex-col items-center justify-center">
+        <Section background="bg-fixed bg-cover bg-center" image="/images/background/scavengersReign.png" body="min-h-[80vh] flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-4xl font-bold mb-12">🎲 Loisirs</h1>
           <div className="grid gap-6 md:grid-cols-3">
 
@@ -225,9 +225,9 @@ export default function Home() {
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
-            <Links emoji="📨" title="Envoyez-moi un e-mail" url={null}/>
-            <Links emoji="📄" title="Consultez mon CV" url={null}/>
-            <Links emoji="🌐" title="Accédez à mon GitHub" url={null}/>
+            <Links emoji="📨" title="Envoyez-moi un e-mail →" url={""}/>
+            <Links emoji="📄" title="Consultez mon CV →" url={""}/>
+            <Links emoji="🌐" title="Accédez à mon GitHub →" url={""}/>
           </div>
         </Section>
 

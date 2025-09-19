@@ -2,17 +2,34 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Section({ children, background = "", body = "", image = "" }) {
+  return (
+    <SectionBackground background={background} image={image}>
+      {/* background */}
+      <SectionBody body={body}>
+        {/* properties for childrens */}
+        {children}
+      </SectionBody>
+    </SectionBackground>
+  );
+}
+
+export function SectionBackground({ children, background = "", image = "" }) {
   const backgroundStyle = `${background}`;
-  const bodyStyle = `p-6 mx-auto max-w-5xl ${body}`;
   const imageStyle = `url('${image}')`;
 
   return (
     <div className={backgroundStyle} style={{ backgroundImage: imageStyle }}>
-      {/* background */}
-      <div className={bodyStyle}>
-        {/* properties for childrens */}
-        {children}
-      </div>
+      {children}
+    </div>
+  );
+}
+
+export function SectionBody({ children, body = "" }) {
+  const bodyStyle = `p-6 mx-auto max-w-5xl ${body}`;
+
+  return (
+    <div className={bodyStyle}>
+      {children}
     </div>
   );
 }
@@ -99,9 +116,9 @@ export function Studies({ title, school, city, date }) {
 
 export function Links({ emoji, title, url }) {
   return (
-    <a className="font-bold text-light text-center" href={url}>
-      {emoji} <span className="underline">{title} →</span>
-    </a>
+    <Link href={url} className="font-bold text-light text-center">
+      {emoji} <span className="underline">{title}</span>
+    </Link>
   );
 }
 

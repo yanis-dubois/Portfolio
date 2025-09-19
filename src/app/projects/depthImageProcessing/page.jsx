@@ -3,7 +3,7 @@ import {Body} from "./body.jsx"
 
 export default function Home() {
   return (
-    <ProjectsPage>
+    <ProjectsPage emoji="📷" title="Traitement d’images optiques 2.5D">
       <Body/>
     </ProjectsPage>
   );

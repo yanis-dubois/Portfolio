@@ -3,7 +3,7 @@ import {Body} from "./body.jsx"
 
 export default function Home() {
   return (
-    <ProjectsPage>
+    <ProjectsPage emoji="🎮" title="Création de jeu vidéo">
       <Body/>
     </ProjectsPage>
   );
