@@ -1,5 +1,5 @@
 import Link from "next/link";
-import {Section, Card, Studies, Projects, Links, Footer} from "../utils/ui.jsx"
+import {Section, Card, Studies, Projects, Links, Footer} from "../utils/staticUI.jsx"
 
 export default function Home() {
   return (
@@ -28,24 +28,15 @@ export default function Home() {
             <div className="col-span-3">
               <h2 className="text-light text-4xl font-bold mb-4 mt-4">👤 Présentation</h2>
               <p className="mb-4 text-justify">
-                Diplômé d’un master en informatique, je suis fasciné par les différentes 
-                applications que l’on peut donner aux mathématiques. C’est l’aspect concret 
-                de l’informatique que j’aime, cette capacité à transformer des concepts 
-                abstraits en outils efficaces et fonctionnels.
+                Diplômé d’un master en informatique, je suis fasciné par les différentes applications que l’on peut donner aux mathématiques. C’est l’aspect concret de l’informatique que j’aime, cette capacité à transformer des concepts abstraits en outils efficaces et fonctionnels.
               </p>
               <p className="mb-4 text-justify">
-                J’apprécie la manipulation d’objets mathématiques et de structures de 
-                données originaux telles que dans la théorie des graphes, la manipulation 
-                de maillages, ou encore la conception d’algorithmes distribués ou parallèle. 
+                J’apprécie la manipulation d’objets mathématiques et de structures de données originaux telles que dans la théorie des graphes, la manipulation de maillages, ou encore la conception d’algorithmes distribués ou parallèle. 
               </p>
               <p className="mb-4 text-justify">
-                Ma spécialisation de Master m’a permis de me former en profondeur 
-                à des domaines qui me passionnent aujourd’hui : 
-                la computer graphics – au travers du rendu réaliste ou expressif, 
-                via rasterisation pour les rendus temps réel ou pathtracing pour les 
-                rendus plus précis.
-                la computer vision – via le traitement et l’analyse de signaux, 
-                notamment avec des méthodes de machine learning.
+                Ma spécialisation de Master m’a permis de me former en profondeur à des domaines qui me passionnent aujourd’hui : 
+                la computer graphics – au travers du rendu réaliste ou expressif, via rasterisation pour les rendus temps réel ou pathtracing pour les rendus plus précis. 
+                la computer vision – via le traitement et l’analyse de signaux, notamment avec des méthodes de machine learning.
               </p>
             </div>
 
