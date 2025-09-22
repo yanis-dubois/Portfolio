@@ -24,6 +24,7 @@ export function ProjectsPage({ children, emoji, title }) {
           <ProjectsNav/>
         </div>
       </nav>
+      <div id="nav-portal-root"></div>
 
       {/* Header */}
       {/* --------------------------------------------------------------------------- */}

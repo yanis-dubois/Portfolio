@@ -2,6 +2,20 @@
 
 import { NavLinks } from "./staticUI.jsx"
 import { useEffect, useState, useRef } from "react";
+import { createPortal } from "react-dom";
+
+export function Portal({ children, name }) {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const portalRoot = document.getElementById(`${name}-portal-root`);
+  return portalRoot ? createPortal(children, portalRoot) : null;
+}
 
 export function ProjectsNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,24 +49,27 @@ export function ProjectsNav() {
       </div>
 
       {/* links */}
-      <nav ref={navRef} className={`absolute right-0 top-0 mt-[2.5rem]
-        bg-dark-deep/70 backdrop-blur-sm border-b border-l border-light-soft/10 shadow-md 
-        p-2 pb-3 space-y-2 z-10
-        transition-all duration-300 ease-out transform
-        ${isOpen
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-4 pointer-events-none"
-        }
-        `}
-      >
-        <NavLinks url={"/projects/materialSimulation"} emoji="🦋" title="Simulation de matériaux bio-inspirés"/>
-        <NavLinks url={"/projects/AR"} emoji="👓" title="Visualisation d’objets 3D en réalité mixte"/>
-        <NavLinks url={"/projects/depthImageProcessing"} emoji="📷" title="Traitement d’images optiques 2.5D"/>
-        <NavLinks url={"/projects/bookshelfAnalysis"} emoji="📚" title="Analyse de bibliothèque"/>
-        <NavLinks url={"/projects/minecraftShader"} emoji="🌄" title="Développement de Shader"/>
-        <NavLinks url={"/projects/videoGame"} emoji="🎮" title="Création de jeu vidéo"/>
-      </nav>
-
+      <Portal name="nav">
+        <div>
+          <nav ref={navRef} className={`fixed right-0 top-0 mt-[2.5rem]
+          bg-dark-deep/70 backdrop-blur-sm border-b border-l border-light-soft/10 shadow-md 
+          p-2 pb-3 space-y-2 z-50
+            transition-all duration-300 ease-out transform
+            ${isOpen
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-4 pointer-events-none"
+            }
+            `}
+          >
+            <NavLinks url={"/projects/materialSimulation"} emoji="🦋" title="Simulation de matériaux bio-inspirés"/>
+            <NavLinks url={"/projects/AR"} emoji="👓" title="Visualisation d’objets 3D en réalité mixte"/>
+            <NavLinks url={"/projects/depthImageProcessing"} emoji="📷" title="Traitement d’images optiques 2.5D"/>
+            <NavLinks url={"/projects/bookshelfAnalysis"} emoji="📚" title="Analyse de bibliothèque"/>
+            <NavLinks url={"/projects/minecraftShader"} emoji="🌄" title="Développement de Shader"/>
+            <NavLinks url={"/projects/videoGame"} emoji="🎮" title="Création de jeu vidéo"/>
+          </nav>
+        </div>
+      </Portal>
     </div>
   );
 }
