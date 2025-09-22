@@ -144,11 +144,8 @@ export function Body() {
           </figure>
         </div>
       </div>
-      <h1>Rapport détaillé</h1>
+      <h1>Ressources supplémentaires</h1>
       <hr />
-      <figure>
-        <div><a href="https://drive.google.com/file/d/1A0NbOEAv3ft5B_GCygAvZErcZi5LReBw/view?usp=share_link">rapport PDF</a></div>
-      </figure>
     </div>
   );
 }

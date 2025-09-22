@@ -106,13 +106,8 @@ export function Body() {
         </div>
       </div>
       <p>Ce principe peut bien sûr être généralisé à d’autres types de traitements : modification du contraste, ajustement des couleurs, application de filtres artistiques, etc.</p>
-      <h1>Rapport détaillé</h1>
+      <h1>Ressources supplémentaires</h1>
       <hr />
-      <figure>
-        <div>
-          <a href="https://drive.google.com/file/d/1BdeK0goqTmyTdKlJyG5KzTgSa1N6fRAI/view?usp=share_link">rapport PDF</a>
-        </div>
-      </figure>
     </div>
   );
 }

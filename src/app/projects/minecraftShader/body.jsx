@@ -896,8 +896,10 @@ export function Body() {
           <img src="/images/projects/minecraftShader/explanation/end_volLight.png" />
         </a>
       </figure>
+      <h1>🖼️ Gallerie</h1>
       <hr />
-      <h1>Gallerie</h1>
+      <h1>Ressources supplémentaires</h1>
+      <hr />
     </div>
   );
 }

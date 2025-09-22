@@ -114,14 +114,47 @@ export function Studies({ title, school, city, date }) {
   );
 }
 
-export function Links({ emoji, title, url }) {
+export function Links({ emoji, icon, title, url, type = "emoji" }) {
+  return type === "emoji" 
+    ? (
+      <div className="font-bold text-light text-center">
+        <Link href={url}>
+          {emoji} <span className="underline">{title}</span>
+        </Link>
+      </div>
+    )
+    : (
+      <div className="font-bold text-light text-center">
+        <Link href={url} className="flex justify-center items-center">
+          <Image src={icon} alt="" width={32} height={32} className="w-[1rem] h-[1rem]" />
+          &nbsp;<span className="underline">{title}</span>
+        </Link>
+      </div>
+    );
+}
+
+export function NavLinks({ emoji, icon, title, url, type = "emoji" }) {
   return (
-    <Link href={url} className="font-bold text-light text-center">
-      {emoji} <span className="underline">{title}</span>
-    </Link>
-  );
+      <div className="text-light-soft">
+        <Link href={url}>
+          {emoji} <span className="hover:underline hover:text-light">{title}</span>
+        </Link>
+      </div>
+    );
 }
 
 export function Footer() {
   return <footer className="bg-dark-soft p-6 text-center text-sm text-light-dark">© 2025 Yanis Dubois — Libre et Open Source</footer>;
+}
+
+export function PDF({ url }) {
+  return (
+    <Links url={url} emoji="📄" title="Consultez le rapport PDF →"/>
+  );
+}
+
+export function Git({ url, title="Accédez au code source →" }) {
+  return (
+    <Links url={url} icon="/images/icons/Git_icon.png" title={title} type="icon"/>
+  );
 }

@@ -188,13 +188,8 @@ export function Body() {
         </a>
         <figcaption>Anisotropie et iridescence</figcaption>
       </figure>
-      <h1>Rapport détaillé</h1>
+      <h1>Ressources supplémentaires</h1>
       <hr />
-      <figure>
-        <div>
-          <a href="https://drive.google.com/file/d/1zqcUIODyrfzguURvbwEm8KH20yEnJ6D2/view?usp=share_link">rapport PDF</a>
-        </div>
-      </figure>
     </div>
   );
 }

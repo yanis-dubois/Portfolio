@@ -1,6 +1,61 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { NavLinks } from "./staticUI.jsx"
+import { useEffect, useState, useRef } from "react";
+
+export function ProjectsNav() {
+  const [isOpen, setIsOpen] = useState(false);
+  const titleRef = useRef(null);
+  const navRef = useRef(null);
+
+  // open & close nav logic
+  useEffect(() => {
+    function handleClick(event) {
+      if (titleRef.current && titleRef.current.contains(event.target)) {
+        setIsOpen((prev) => !prev);
+      }
+      else if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClick);
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
+
+  return (
+    <div>
+
+      {/* title */}
+      <div ref={titleRef}>
+        <span>⚙️ </span>
+        <span className={`${isOpen ? "text-light" : ""}`}>Autres projets</span>
+      </div>
+
+      {/* links */}
+      <nav ref={navRef} className={`absolute right-0 top-0 mt-[2.5rem]
+        bg-dark-deep/70 backdrop-blur-sm border-b border-l border-light-soft/10 shadow-md 
+        p-2 pb-3 space-y-2 z-10
+        transition-all duration-300 ease-out transform
+        ${isOpen
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-4 pointer-events-none"
+        }
+        `}
+      >
+        <NavLinks url={"/projects/materialSimulation"} emoji="🦋" title="Simulation de matériaux bio-inspirés"/>
+        <NavLinks url={"/projects/AR"} emoji="👓" title="Visualisation d’objets 3D en réalité mixte"/>
+        <NavLinks url={"/projects/depthImageProcessing"} emoji="📷" title="Traitement d’images optiques 2.5D"/>
+        <NavLinks url={"/projects/bookshelfAnalysis"} emoji="📚" title="Analyse de bibliothèque"/>
+        <NavLinks url={"/projects/minecraftShader"} emoji="🌄" title="Développement de Shader"/>
+        <NavLinks url={"/projects/videoGame"} emoji="🎮" title="Création de jeu vidéo"/>
+      </nav>
+
+    </div>
+  );
+}
 
 export function TableOfContents() {
   const [headings, setHeadings] = useState([]);
@@ -57,8 +112,8 @@ export function TableOfContents() {
       onMouseLeave={() => setIsOpen(false)}
     >
 
-        {/* hiden */}
-        <div className={`max-h-full overflow-auto px-2 space-y-3 pl-6
+        {/* hidden */}
+        <div className={`max-h-full overflow-hidden px-2 space-y-3 pl-6
           transition-opacity duration-300 ease-out
           ${isOpen 
             ? "opacity-0"
