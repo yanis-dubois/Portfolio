@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {Section, Card, Studies, Projects, Links, Footer} from "../utils/staticUI.jsx"
 
 export default function Home() {
@@ -8,8 +7,8 @@ export default function Home() {
       {/* Header */}
       {/* --------------------------------------------------------------------------- */}
       {/* --------------------------------------------------------------------------- */}
-      <header className="p-6 bg-dark text-light h-screen flex items-center justify-center">
-        <div className="flex flex-col items-center text-center">
+      <header className="p-6 bg-dark text-light h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url(/images/background/monolyth.png)" }}>
+        <div className="flex flex-col items-center text-center text-shadow-lg/50">
           <h1 className="text-8xl font-bold">Yanis Dubois</h1>
           <p className="mt-4 text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>  
         </div>
@@ -23,9 +22,9 @@ export default function Home() {
         {/* Introduction */}
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark-soft text-light-soft" body="flex flex-col items-center justify-center">
-          <div className="grid grid-cols-5 gap-8">
+          <div className="md:grid md:grid-cols-5 md:gap-8">
             {/* Présentation */}
-            <div className="col-span-3">
+            <div className="md:col-span-3">
               <h2 className="text-light text-4xl font-bold mb-4 mt-4">👤 Présentation</h2>
               <p className="mb-4 text-justify">
                 Diplômé d’un master en informatique, je suis fasciné par les différentes applications que l’on peut donner aux mathématiques. C’est l’aspect concret de l’informatique que j’aime, cette capacité à transformer des concepts abstraits en outils efficaces et fonctionnels.
@@ -41,7 +40,7 @@ export default function Home() {
             </div>
 
             {/* Formation */}
-            <Card title="🎓 Formation" body="col-span-2">
+            <Card title="🎓 Formation" body="max-w-86 mx-auto md:col-span-2" titleStyle="text-center md:text-left">
               <Studies 
                 title="Master informatique"
                 school="Université de Bordeaux"
@@ -74,9 +73,9 @@ export default function Home() {
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-fixed bg-cover bg-center" image="/images/background/katanaZero.png" body="min-h-[80vh] flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-4xl font-bold mb-12">⚙️ Compétences</h1>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3">
 
-            <Card title="💬 Langages" variant="translucent">
+            <Card title="💬 Langages" variant="translucent" body="max-w-96 mx-auto">
               <p className="mb-2">
                 Mon parcours m’a conduit à développer principalement en C, C++, C#, Java, Python et OpenGL, aussi bien pour la création d’applications que pour la mise en œuvre de preuves de concepts.
               </p>
@@ -85,7 +84,7 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card title="🛠️ Techniques" variant="translucent">
+            <Card title="🛠️ Techniques" variant="translucent" body="max-w-96 mx-auto">
               <p className="mb-2">
                 J’ai eu l’occasion d’utiliser un large éventail d’environnements de développement (VS Code, IntelliJ, Anaconda, Android Studio, Visual Studio, …) ainsi que des outils de gestion de versions comme Git.
               </p>
@@ -97,7 +96,7 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card title="📖 Académiques" variant="translucent">
+            <Card title="📖 Académiques" variant="translucent" body="max-w-96 mx-auto">
               <p className="mb-2">
                Ma formation m’a habitué à lire, analyser et synthétiser des articles scientifiques, mais aussi à en rédiger.
               </p>
@@ -113,9 +112,9 @@ export default function Home() {
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-fixed bg-cover bg-center" image="/images/background/scavengersReign.png" body="min-h-[80vh] flex flex-col items-center justify-center">
           <h1 className="text-center text-light text-4xl font-bold mb-12">🎲 Loisirs</h1>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-3">
 
-            <Card title="🎵 Musique" variant="translucent">
+            <Card title="🎵 Musique" variant="translucent" body="max-w-96 mx-auto">
               <p className="mb-2">
                 Passionné de musique depuis de nombreuses années, je pratique la batterie depuis 14 ans.
               </p>
@@ -124,7 +123,7 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card title="🎬 Cinéma et Bandes Dessinées" variant="translucent">
+            <Card title="🎬 Cinéma et Bandes Dessinées" variant="translucent" body="max-w-96 mx-auto">
               <p className="mb-2">
                 Je puise beaucoup d’inspiration dans les univers de la science-fiction, que ce soit à travers le cinéma, l’animation, les bandes dessinées ou les mangas.
               </p>
@@ -133,7 +132,7 @@ export default function Home() {
               </p>
             </Card>
 
-            <Card title="👾 Jeux Vidéo" variant="translucent">
+            <Card title="👾 Jeux Vidéo" variant="translucent" body="max-w-96 mx-auto">
               <p className="mb-2">
                 Amateur de jeux vidéo, j’apprécie particulièrement les univers immersifs et les expériences narratives originales.
               </p>
@@ -150,8 +149,8 @@ export default function Home() {
         <Section background="bg-dark-deep">
           <h1 className="text-light text-3xl font-bold mb-12 mt-12">🖥️ Projets universitaires et professionnels</h1>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card type="project" image="/images/projects/materialSimulation/result.png">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <Card type="project" image="/images/projects/materialSimulation/result.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
               <Projects
                 title="🦋 Simulation de matériaux bio-inspirés"
                 place="Inria, Bordeaux"
@@ -161,7 +160,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card type="project" image="/images/projects/AR/XR_visulizer.png">
+            <Card type="project" image="/images/projects/AR/XR_visulizer.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
               <Projects
                 title="👓 Visualisation d’objets 3D en réalité mixte"
                 place="LaBRI, Bordeaux"
@@ -171,7 +170,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card type="project" image="/images/projects/depthImageProcessing/indoorTotoro_mask.png">
+            <Card type="project" image="/images/projects/depthImageProcessing/indoorTotoro_mask.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
               <Projects
                 title="📷 Traitement d’images optiques 2.5D"
                 place="LaBRI, Bordeaux"
@@ -181,7 +180,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card type="project" image="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png">
+            <Card type="project" image="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
               <Projects
                 title="📚 Analyse de bibliothèque"
                 place="CNRS, Bordeaux"
@@ -199,8 +198,8 @@ export default function Home() {
           <hr className="border-light-dark" />
           <h1 className="text-light text-3xl font-bold mb-12 mt-12">💻 Projets personnels</h1>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            <Card type="project" image="/images/projects/minecraftShader/galerie/surface/coverON.png">
+          <div className="grid gap-6 lg:grid-cols-2">
+            <Card type="project" image="/images/projects/minecraftShader/galerie/surface/coverON.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
               <Projects
                 title="🌄 Développement de Shader"
                 date="Octobre 2024 - Juin 2025"
@@ -209,7 +208,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card type="project" image="/images/projects/videoGame/chronoCriminal.png">
+            <Card type="project" image="/images/projects/videoGame/chronoCriminal.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
               <Projects
                 title="🎮 Création de jeu vidéo"
                 place="Guilde du dé libéré"

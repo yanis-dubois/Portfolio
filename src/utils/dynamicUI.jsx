@@ -58,7 +58,7 @@ export function ProjectsNav() {
         <div>
           <nav ref={navRef} className={`fixed right-0 top-0 mt-[2.5rem]
           bg-dark-deep/70 backdrop-blur-sm border-b border-l border-light-soft/10 shadow-md 
-          p-2 pb-3 space-y-2 z-50
+          p-2 pb-3 space-y-2 z-5
             transition-all duration-300 ease-out transform
             ${isOpen
               ? "opacity-100 translate-y-0"
@@ -163,7 +163,7 @@ export function TableOfContents() {
         {/* showed */}
         <nav className={`max-h-[70vh] w-[250px] fixed top-1/2 -translate-y-1/2 overflow-y-auto 
           bg-dark border border-light-soft/10 rounded-2xl shadow-md 
-          ml-4 p-2 pt-4 pb-4 text-sm space-y-2 z-10
+          ml-4 p-2 pt-4 pb-4 text-sm space-y-2 z-1
           transition-all duration-300 ease-out transform
           ${isOpen 
             ? "opacity-100 translate-x-0"

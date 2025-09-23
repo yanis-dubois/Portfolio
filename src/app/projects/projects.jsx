@@ -9,7 +9,7 @@ export function ProjectsPage({ children, emoji, title }) {
 
       {/* Nav */}
       {/* --------------------------------------------------------------------------- */}
-      <nav className="bg-dark-deep/70 backdrop-blur-sm border-b border-light-soft/10 sticky top-0 w-full p-2 text-light-soft z-50 flex justify-between">
+      <nav className="bg-dark-deep/70 backdrop-blur-sm border-b border-light-soft/10 sticky top-0 w-full p-2 text-light-soft z-5 flex justify-between">
         <div className="pl-2">
           <Link href={"/"}>
             🏠 <span className="hover:underline hover:text-light">Accueil</span>

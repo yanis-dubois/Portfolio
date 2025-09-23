@@ -34,12 +34,13 @@ export function SectionBody({ children, body = "" }) {
   );
 }
 
-export function Card({ children, title, body = "", variant = "opaque", type = "", image = null }) {
+export function Card({ children, title, titleStyle = "", body = "", variant = "opaque", type = "", image = null }) {
   const base = `text-light-soft border border-light-soft/10 shadow-md rounded-2xl ${body}`;
   const styles = {
     opaque: `${base} bg-dark`,
     translucent: `${base} bg-dark/70 backdrop-blur-sm`,
   };
+  const titleStyleM = `text-light text-xl font-bold mb-4 ${titleStyle}`;
 
   // card with an image
   if (type === "project") {
@@ -56,7 +57,7 @@ export function Card({ children, title, body = "", variant = "opaque", type = ""
   // default card
   return (
     <div className={`${styles[variant]} p-6`}>
-      {title && <h2 className="text-light text-xl font-bold mb-4">{title}</h2>}
+      {title && <h2 className={titleStyleM}>{title}</h2>}
       {children}
     </div>
   );
