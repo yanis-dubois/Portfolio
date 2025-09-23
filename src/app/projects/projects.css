@@ -74,9 +74,15 @@
 	margin-top: 0.5em;
 }
 
-.project img {
+.project img:not(.fullsize) {
 	max-width: 100%;
-  max-height: 350px;
+  max-height: 420px;
+}
+
+.fullsize img {
+	all: unset;
+	max-width: 100%;
+  max-height: 100%;
 }
 
 /* *****************************

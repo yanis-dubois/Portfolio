@@ -3,6 +3,7 @@
 import { NavLinks } from "./staticUI.jsx"
 import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 
 export function Portal({ children, name }) {
   const [mounted, setMounted] = useState(false);
@@ -43,9 +44,13 @@ export function ProjectsNav() {
     <div>
 
       {/* title */}
-      <div ref={titleRef}>
-        <span>⚙️ </span>
-        <span className={`${isOpen ? "text-light" : ""}`}>Autres projets</span>
+      <div ref={titleRef} className={`cursor-pointer flex justify-center ${isOpen ? "text-light" : "text-light-soft"}`}>
+        <p>⚙️ <span className={`pr-1`}>Autres projets</span></p>
+        <div className={`transition-transform duration-300 ease-out ${
+          isOpen ? "rotate-90" : "rotate-0"
+        }`}>
+          ▸
+        </div>
       </div>
 
       {/* links */}
@@ -78,7 +83,6 @@ export function TableOfContents() {
   const [headings, setHeadings] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [activeId, setActiveId] = useState(0);
-  const [scrollPercent, setScrollPercent] = useState(0);
 
   // select all titles
   useEffect(() => {
@@ -191,5 +195,71 @@ export function TableOfContents() {
         </nav>
 
     </aside>
+  );
+}
+
+export function ImageComparison({ image, imageOff, imageOn }) {
+  const imageOFF = image ? `${image}OFF.png` : imageOff;
+  const imageON = image ? `${image}ON.png` : imageOn;
+
+  const [position, setPosition] = useState(50); // % visible
+  const [isDragging, setIsDragging] = useState(false);
+
+  const handleDown = () => setIsDragging(true);
+  const handleUp = () => setIsDragging(false);
+
+  const handleMove = (event) => {
+    if (!isDragging) return;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const percent = (x / rect.width) * 100;
+    setPosition(Math.min(Math.max(percent, 0), 100));
+  };
+
+  return (
+    <div
+      className="relative w-full aspect-video"
+      onMouseMove={handleMove}
+      onMouseUp={handleUp}
+    >
+      {/* after image */}
+      <Image 
+        src={imageON}
+        alt="on" 
+        width={1728} 
+        height={1080} 
+        className="fullsize absolute top-0 left-0 w-full h-full object-cover select-none"
+      />
+
+      {/* before image  */}
+      <Image
+        src={imageOFF}
+        alt="off"
+        width={1728} 
+        height={1080} 
+        className="fullsize absolute top-0 left-0 w-full h-full object-cover select-none"
+        style={{
+          clipPath: `inset(0 ${100 - position}% 0 0)`,
+        }}
+      />
+
+      {/* slider ligne */}
+      <div
+        className="absolute top-0 h-full w-0.75 bg-light shadow-md/100"
+        style={{ left: `${position}%`, transform: "translateX(-50%)" }}
+      />
+
+      {/* slider button */}
+      <div
+        className="absolute top-1/2 w-14 h-14 font-mono text-2xl text-light text-center rounded-full bg-light-dark/70 backdrop-blur-sm border-2 border-light shadow-md/50 select-none cursor-col-resize active:cursor-grabbing flex items-center justify-center"
+        style={{
+          left: `${position}%`,
+          transform: "translate(-50%, -50%)",
+        }}
+        onMouseDown={handleDown}
+      >
+        <p>↔</p>
+      </div>
+    </div>
   );
 }

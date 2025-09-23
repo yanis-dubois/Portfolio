@@ -1,3 +1,5 @@
+import {ImageComparison} from "../../../utils/dynamicUI.jsx"
+
 export function Body() {
   return (
     <div>
@@ -73,6 +75,7 @@ export function Body() {
         <a href="/images/projects/minecraftShader/explanation/basic.png">
           <img src="/images/projects/minecraftShader/explanation/basic.png" />
         </a>
+        <figcaption>Premier rendu</figcaption>
       </figure>
       <h3>Lumière ambiante</h3>
       <p>Dans la plupart des jeux vidéo, une lumière ambiante est ajoutée pour améliorer le confort visuel du joueur. Elle permet d’éviter les zones totalement noires, en maintenant un niveau d’éclairage minimal, même dans les environnements très sombres (comme des grottes profondes). Cette lumière, bien qu’irréaliste, joue un rôle important en termes de lisibilité et d’expérience utilisateur.</p>
@@ -85,14 +88,11 @@ export function Body() {
       </ul>
       <p>Ce niveau très faible assure que les zones dans l’ombre restent sombres, tout en étant perceptible.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/ambientLight_off.png">
-          <img src="/images/projects/minecraftShader/explanation/ambientLight_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/ambientLight_on.png">
-          <img src="/images/projects/minecraftShader/explanation/ambientLight_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/ambientLight_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/ambientLight_on.png"
+        />
+        <figcaption>Lumière ambiante (sans / avec)</figcaption>
       </figure>
       <h3>Lumière directe du soleil (ou de la lune)</h3>
       <p>Enfin, le modèle intègre également une lumière directe provenant du soleil en journée, ou de la lune pendant la nuit. Cette lumière n’est pas transmise directement par le jeu : elle doit être simulée dynamiquement lors du rendu.</p>
@@ -108,13 +108,13 @@ export function Body() {
         <a href="/images/projects/minecraftShader/explanation/direct_noon.png">
           <img src="/images/projects/minecraftShader/explanation/direct_noon.png" />
         </a>
-        <figcaption>midi (lumière zénithale)</figcaption>
+        <figcaption>Midi (lumière zénithale)</figcaption>
       </figure>
       <figure>
         <a href="/images/projects/minecraftShader/explanation/direct_morning.png">
           <img src="/images/projects/minecraftShader/explanation/direct_morning.png" />
         </a>
-        <figcaption>matin (lumière provenant de la gauche)</figcaption>
+        <figcaption>Matin (lumière provenant de la gauche)</figcaption>
       </figure>
       <h2>1.2 Ajustement des lumières</h2>
       <p>Dans le but de renforcer l’immersion et de rendre l’éclairage plus crédible, j’ai progressivement complexifié le système lumineux en introduisant des variations de couleur et d’intensité selon le contexte environnemental du jeu.</p>
@@ -157,19 +157,19 @@ export function Body() {
         <a href="/images/projects/minecraftShader/explanation/skyLightColor_noon.png">
           <img src="/images/projects/minecraftShader/explanation/skyLightColor_noon.png" />
         </a>
-        <figcaption>midi</figcaption>
+        <figcaption>Midi</figcaption>
       </figure>
       <figure>
         <a href="/images/projects/minecraftShader/explanation/skyLightColor_morning.png">
           <img src="/images/projects/minecraftShader/explanation/skyLightColor_morning.png" />
         </a>
-        <figcaption>matin</figcaption>
+        <figcaption>Matin</figcaption>
       </figure>
       <figure>
         <a href="/images/projects/minecraftShader/explanation/skyLightColor_night.png">
           <img src="/images/projects/minecraftShader/explanation/skyLightColor_night.png" />
         </a>
-        <figcaption>nuit</figcaption>
+        <figcaption>Nuit</figcaption>
       </figure>
       <h3>Raffinement des lumières artificielles</h3>
       <p>J’ai également apporté des ajustements aux sources lumineuses artificielles, telles que les torches, feux ou lanternes, dans l’objectif de leur donner un aspect plus réaliste.</p>
@@ -198,14 +198,11 @@ export function Body() {
       </ol>
       <p>Cette approche permet d’enrichir la représentation des sources lumineuses et d’ajouter plus de nuances dans la façon dont elles interagissent avec leur environnement.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/blockLightColor_off.png">
-          <img src="/images/projects/minecraftShader/explanation/blockLightColor_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/blockLightColor_on.png">
-          <img src="/images/projects/minecraftShader/explanation/blockLightColor_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/blockLightColor_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/blockLightColor_on.png"
+        />
+        <figcaption>Nouveau système d'éclairage artificiel (sans / avec)</figcaption>
       </figure>
       <h3>Amélioration de la lisibilité géométrique</h3>
       <p>
@@ -216,28 +213,18 @@ export function Body() {
       </p>
       <p>Ce traitement subtil, mais efficace, permet de renforcer la lisibilité spatiale de la scène et d’éviter l’effet de &quot;platitude&quot; souvent associé à une lumière trop uniforme.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/blockLightColor_on.png">
-          <img src="/images/projects/minecraftShader/explanation/blockLightColor_on.png" />
-        </a>
-        <figcaption>sans</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/blockLightColor_on.png"
+          imageOn="/images/projects/minecraftShader/explanation/faceTweak.png"
+        />
+        <figcaption>Amélioration de la lisibilité (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/faceTweak.png">
-          <img src="/images/projects/minecraftShader/explanation/faceTweak.png" />
-        </a>
-        <figcaption>avec</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/skyLightColor_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/skyLightColor_morning.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/faceTweak_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/faceTweak_morning.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/skyLightColor_morning.png"
+          imageOn="/images/projects/minecraftShader/explanation/faceTweak_morning.png"
+        />
+        <figcaption>Amélioration de la lisibilité (sans / avec)</figcaption>
       </figure>
       <h2>1.3 Occlusion Ambiante</h2>
       <p>
@@ -248,28 +235,18 @@ export function Body() {
         Dans le cas du projet en question, les blocs constituant le terrain bénéficient déjà d’une occlusion ambiante pré-calculée<strong> </strong>et intégrée dans les données du jeu. Cela permet une intégration simple et directe dans le pipeline de rendu.
       </p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/faceTweak.png">
-          <img src="/images/projects/minecraftShader/explanation/faceTweak.png" />
-        </a>
-        <figcaption>sans</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/faceTweak.png"
+          imageOn="/images/projects/minecraftShader/explanation/vanillaAO_indoor.png"
+        />
+        <figcaption>Occlusion Ambiante (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/vanillaAO_indoor.png">
-          <img src="/images/projects/minecraftShader/explanation/vanillaAO_indoor.png" />
-        </a>
-        <figcaption>avec</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/faceTweak_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/faceTweak_morning.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/vanillaAO_outside.png">
-          <img src="/images/projects/minecraftShader/explanation/vanillaAO_outside.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/faceTweak_morning.png"
+          imageOn="/images/projects/minecraftShader/explanation/vanillaAO_outside.png"
+        />
+        <figcaption>Occlusion Ambiante (sans / avec)</figcaption>
       </figure>
       <p>En revanche, pour les éléments de décor (comme les plantes, objets décoratifs, ou structures non cubiques), aucune information d’occlusion ambiante n’est fournie. Il est donc nécessaire de la calculer dynamiquement dans le shader.</p>
       <p>Pour cela, j’ai classé les éléments de décor selon plusieurs critères : taille, épaisseur, orientation.</p>
@@ -277,16 +254,11 @@ export function Body() {
       <p>Ce traitement permet, par exemple, à des éléments allongés comme les hautes herbes ou les plantes grimpantes d’avoir une occlusion suivant cette forme verticale, et à des éléments moins allongés comme des buissons ou des fougère d’avoir une occlusion ambiante moins étiré.</p>
       <p>Cette approche offre un bon compromis entre qualité visuelle et coût de calcul, tout en s’adaptant aux contraintes du rendu en temps réel.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/customAO_off.png">
-          <img src="/images/projects/minecraftShader/explanation/customAO_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/customAO_on.png">
-          <img src="/images/projects/minecraftShader/explanation/customAO_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/customAO_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/customAO_on.png"
+        />
+        <figcaption>Occlusion Ambiante sur la végétation (sans / avec)</figcaption>
       </figure>
       <h2>1.4 Ombres projetées</h2>
       <p>Jusqu’à présent, le calcul de l’éclairage direct reposait uniquement sur deux vecteurs : la normale de surface et la direction vers la source lumineuse (le soleil ou la lune). Cette approche, bien qu&#x27;efficace dans un premier temps, néglige un aspect fondamental du réalisme visuel : la prise en compte des ombres projetées. En effet, aucun obstacle n&#x27;est actuellement capable de bloquer la lumière incidente, ce qui donne lieu à des scènes visuellement incomplètes et peu cohérentes.</p>
@@ -306,29 +278,33 @@ export function Body() {
       </figure>
       <p>Pour adoucir la transition entre les zones éclairées et les zones ombrées, j’ai mis en place une technique de filtrage multi-échantillons de la shadow map. Cela permet d’ajouter une zone de pénombre en bordure d’ombre, apportant un rendu plus naturel et visuellement agréable.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/softShadow_noon.png">
-          <img src="/images/projects/minecraftShader/explanation/softShadow_noon.png" />
-        </a>
-        <figcaption>midi</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/hardShadow_noon.png"
+          imageOn="/images/projects/minecraftShader/explanation/softShadow_noon.png"
+        />
+        <figcaption>Ombre adoucie - midi (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/softShadow_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/softShadow_morning.png" />
-        </a>
-        <figcaption>matin</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/hardShadow_morning.png"
+          imageOn="/images/projects/minecraftShader/explanation/softShadow_morning.png"
+        />
+        <figcaption>Ombre adoucie - matin (sans / avec)</figcaption>
       </figure>
       <p>Enfin, j’ai souhaité explorer un effet de style visuel appelé split toning. Il s’agit d’un procédé artistique visant à appliquer des teintes différentes selon l’exposition à la lumière. Dans mon cas, les zones éclairées conservent une température de couleur neutre ou chaude, tandis que les zones d’ombre adoptent une teinte bleutée. Ce choix réduit le contraste brutal de luminosité et crée une ambiance plus douce et cinématographique, tout en renforçant la séparation visuelle entre lumière et obscurité.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/splitToning_noon.png">
-          <img src="/images/projects/minecraftShader/explanation/splitToning_noon.png" />
-        </a>
-        <figcaption>midi</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/softShadow_noon.png"
+          imageOn="/images/projects/minecraftShader/explanation/splitToning_noon.png"
+        />
+        <figcaption>Split toning - midi (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/splitToning_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/splitToning_morning.png" />
-        </a>
-        <figcaption>matin</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/softShadow_morning.png"
+          imageOn="/images/projects/minecraftShader/explanation/splitToning_morning.png"
+        />
+        <figcaption>Split toning - matin (sans / avec)</figcaption>
       </figure>
       <h2>1.5 Pixélisation</h2>
       <p>Pour conclure le système d’éclairage, j’ai souhaité renforcer la cohérence visuelle avec l’identité graphique originale de Minecraft, en réintroduisant volontairement un effet de pixélisation dans le rendu. En effet, l’un des éléments emblématiques du jeu est son esthétique résolument pixelisée, que je tenais à respecter malgré l’ajout de techniques de rendu modernes.</p>
@@ -338,16 +314,18 @@ export function Body() {
         Mais c’est aussi, à mes yeux, l’une des réussites les plus marquantes du projet. En assumant pleinement le style visuel pixel-art de <em>Minecraft</em>, tout en lui apportant un rendu plus physique et réaliste, j’ai pu créer un équilibre unique entre modernité technique et fidélité artistique.
       </p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/pixelatedShadow_noon.png">
-          <img src="/images/projects/minecraftShader/explanation/pixelatedShadow_noon.png" />
-        </a>
-        <figcaption>midi</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/splitToning_noon.png"
+          imageOn="/images/projects/minecraftShader/explanation/pixelatedShadow_noon.png"
+        />
+        <figcaption>Pixélisation - midi (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/pixelatedShadow_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/pixelatedShadow_morning.png" />
-        </a>
-        <figcaption>matin</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/splitToning_morning.png"
+          imageOn="/images/projects/minecraftShader/explanation/pixelatedShadow_morning.png"
+        />
+        <figcaption>Pixélisation - matin (sans / avec)</figcaption>
       </figure>
       <hr />
       <h1>2. Matériaux</h1>
@@ -370,16 +348,11 @@ export function Body() {
       <p>L’émissivité est généralement représentée sous la forme d’une valeur d’intensité, qui vient s’ajouter directement au résultat final du calcul d’éclairage. Plus cette valeur est élevée, plus l’objet semblera briller par lui-même, et son apparence se rapprochera de sa couleur d’albedo d’origine, même en l’absence de lumière ambiante ou directe. Un objet hautement émissif reste donc parfaitement visible dans l’obscurité.</p>
       <p>Dans la pratique, cela signifie que le modèle d’éclairage utilisé dans le shader doit intégrer l’émissivité comme un terme additif indépendant de l’éclairage incident. Cela permet d&#x27;assurer que les objets concernés conservent une présence visuelle forte, quelles que soient les conditions lumineuses environnantes.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/emissive_off.png">
-          <img src="/images/projects/minecraftShader/explanation/emissive_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/emissive_on.png">
-          <img src="/images/projects/minecraftShader/explanation/emissive_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/emissive_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/emissive_on.png"
+        />
+        <figcaption>Émissivité (sans / avec)</figcaption>
       </figure>
       <h2>2.2 Rugosité et réflectance</h2>
       <p>Dans la continuité de l’ajout de l’émissivité, j’ai intégré deux autres propriétés fondamentales du modèle PBR : la rugosité et la réflectance. Ces deux paramètres permettent de décrire avec plus de précision le comportement de la lumière à la surface d’un matériau, en introduisant une composante spéculaire en complément du modèle diffus.</p>
@@ -410,16 +383,18 @@ export function Body() {
       </figure>
       <p>En cohérence avec l’approche pixelisée que j’ai adoptée pour l’ensemble du pipeline de rendu, j’ai également adapté le calcul de la tâche spéculaire : au lieu d’évaluer ce reflet de manière continue sur toute la surface, il est quantifié selon la grille de texture de l’objet. Cela permet de respecter pleinement l’esthétique visuelle du jeu original, tout en apportant un niveau de détail plus poussé et fidèle aux matériaux simulés.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/specular_pixelated.png">
-          <img src="/images/projects/minecraftShader/explanation/specular_pixelated.png" />
-        </a>
-        <figcaption>par matériaux</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/specular_on.png"
+          imageOn="/images/projects/minecraftShader/explanation/specular_pixelated.png"
+        />
+        <figcaption>Pixélisation - par matériaux (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/specular_pbrPixelated.png">
-          <img src="/images/projects/minecraftShader/explanation/specular_pbrPixelated.png" />
-        </a>
-        <figcaption>par texel</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/specular_pbr.png"
+          imageOn="/images/projects/minecraftShader/explanation/specular_pbrPixelated.png"
+        />
+        <figcaption>Pixélisation - par texel (sans / avec)</figcaption>
       </figure>
       <h2>2.3 Réflexion</h2>
       <p>Grâce aux données de rugosité et de réflectance désormais intégrées aux matériaux, il devient possible de simuler un nouveau phénomène essentiel à la perception réaliste des surfaces : les réflexions.</p>
@@ -428,16 +403,11 @@ export function Body() {
         Pour rendre visuellement cet effet dans le moteur de rendu, j’ai implémenté une technique appelée Screen Space Reflections (SSR), ou réflexion en espace écran. Cette méthode repose sur l’utilisation des informations déjà disponibles dans l’image (comme la profondeur et les normales de surface) pour calculer les réflexions en temps réel, sans avoir à simuler l’intégralité de la scène une seconde fois depuis chaque surface réfléchissante. Bien qu’elle ait certaines limites, notamment dans les zones hors champ ou avec des objets très fins, elle permet d’obtenir des réflexions convaincantes à moindre coût de performance, ce qui est essentiel dans un contexte de rendu temps réel comme celui de <em>Minecraft</em>.
       </p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/reflection_off.png">
-          <img src="/images/projects/minecraftShader/explanation/reflection_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/reflection_on.png">
-          <img src="/images/projects/minecraftShader/explanation/reflection_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/reflection_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/reflection_on.png"
+        />
+        <figcaption>Réflexion (sans / avec)</figcaption>
       </figure>
       <h2>2.4 Transluminescence</h2>
       <p>La transluminescence, ou subsurface scattering en anglais, désigne la capacité d’un matériau à laisser passer la lumière sous sa surface avant de la diffuser. Ce phénomène est particulièrement visible sur des matériaux organiques tels que l’herbe, les feuilles, ou les pétales de fleurs, mais peut également apparaître, de manière plus subtile, sur certains types de roche.</p>
@@ -451,16 +421,11 @@ export function Body() {
       </ul>
       <p>Ce traitement, bien que simplifié, renforce considérablement le réalisme visuel de certains matériaux naturels et accentue la profondeur des scènes, tout en respectant le style artistique du jeu.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/subsurface_off.png">
-          <img src="/images/projects/minecraftShader/explanation/subsurface_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/subsurface_on.png">
-          <img src="/images/projects/minecraftShader/explanation/subsurface_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/subsurface_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/subsurface_on.png"
+        />
+        <figcaption>Transluminescence (sans / avec)</figcaption>
       </figure>
       <h2>2.5 Porosité</h2>
       <p>Une autre propriété que j’ai souhaité intégrer est celle de la porosité, qui permet de faire varier l’apparence des matériaux en fonction de leur exposition à la pluie. En effet, plus un matériau est poreux, plus il absorbe l’eau qui entre en contact avec sa surface.</p>
@@ -473,16 +438,11 @@ export function Body() {
       </ul>
       <p>L’introduction de la porosité permet ainsi de renforcer le réalisme des scènes en conditions météorologiques humides, tout en enrichissant la diversité des réactions visuelles des matériaux selon leur nature.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/porosity_off.png">
-          <img src="/images/projects/minecraftShader/explanation/porosity_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/porosity_on.png">
-          <img src="/images/projects/minecraftShader/explanation/porosity_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/porosity_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/porosity_on.png"
+        />
+        <figcaption>Porosité (sans / avec)</figcaption>
       </figure>
       <h2>2.6 Normal map</h2>
       <p>Après avoir défini en détail les propriétés physiques des matériaux, il est temps de s’intéresser à la structure des objets eux-mêmes, et plus particulièrement à la manière dont on peut enrichir leur apparence sans modifier leur géométrie.</p>
@@ -490,16 +450,11 @@ export function Body() {
       <p>Les packs de textures PBR disponibles dans la communauté incluent souvent des normal maps pour chaque texture, ce qui permet de les intégrer directement dans notre pipeline de rendu. Cependant, dans un souci d’accessibilité pour les joueurs ne souhaitant pas utiliser ces packs, j’ai également développé une méthode procédurale de génération de normal maps.</p>
       <p>Cette méthode repose sur un principe simple : pour chaque fragment de surface à évaluer, on applique une variation pseudo-aléatoire de la normale, calculée en fonction de la couleur de la texture à cet emplacement. Cela permet d’attribuer une orientation cohérente à tous les pixels partageant une même teinte, tout en introduisant une différenciation subtile entre zones de couleurs distinctes. Le résultat est une surface qui conserve l’esprit stylisé du jeu tout en gagnant en richesse visuelle grâce à l’apparence de micro-reliefs dynamiques.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/normalmap_off.png">
-          <img src="/images/projects/minecraftShader/explanation/normalmap_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/normalmap_on.png">
-          <img src="/images/projects/minecraftShader/explanation/normalmap_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/normalmap_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/normalmap_on.png"
+        />
+        <figcaption>Normal map (sans / avec)</figcaption>
       </figure>
       <h2>2.7 Parallax Occlusion Mapping</h2>
       <p>
@@ -508,16 +463,11 @@ export function Body() {
       <p>Le principe du POM repose sur une technique d’échantillonnage adaptatif. Depuis chaque point de la surface visible par la caméra, on envoie un rayon dans la direction du regard, et on recherche l’intersection entre ce rayon et la carte d’élévation. Cette opération permet de déterminer le point apparent à afficher à l’écran, en tenant compte des creux et des bosses indiqués par la height map.</p>
       <p>Cette méthode permet ainsi de simuler un effet de parallaxe accompagné d’occlusion : les détails en relief semblent se déplacer plus lentement que les zones en retrait lorsque le point de vue du joueur change, tout en permettant à certaines portions de la surface de cacher partiellement d’autres éléments en fonction de leur élévation. Le résultat visuel renforce grandement l’illusion de profondeur, tout en conservant des performances adaptées à un rendu temps réel.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/pom_off.png">
-          <img src="/images/projects/minecraftShader/explanation/pom_off.png" />
-        </a>
-        <figcaption>sans</figcaption>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/pom_on.png">
-          <img src="/images/projects/minecraftShader/explanation/pom_on.png" />
-        </a>
-        <figcaption>avec</figcaption>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/pom_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/pom_on.png"
+        />
+        <figcaption>Parallax Occlusion Mapping (sans / avec)</figcaption>
       </figure>
       <hr />
       <h1>3. Effets atmosphérique</h1>
@@ -526,55 +476,33 @@ export function Body() {
       <p>Le rendu du ciel a été repensé dans une optique plus expressive. Un premier travail a consisté à définir un dégradé de couleur variant selon la hauteur dans le ciel, permettant d’obtenir une teinte plus chaude ou plus froide entre l’horizon et le zénith. Un halo lumineux a également été ajouté autour du soleil et de la lune, simulant l’éclat diffus qu’ils génèrent.</p>
       <p>Trois palettes de couleurs distinctes permettent de refléter les différents moments de la journée : plein jour, aube/crépuscule, et nuit. En période nocturne, un champ d’étoiles généré procéduralement est affiché, apportant du relief au ciel et ajoutant à l’ambiance globale.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/ciel_noonOff.png">
-          <img src="/images/projects/minecraftShader/explanation/ciel_noonOff.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/ciel_aubeOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/ciel_aubeOn.png"
+        />
+        <figcaption>Nouveau ciel - matin (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/ciel_noonOn.png">
-          <img src="/images/projects/minecraftShader/explanation/ciel_noonOn.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/ciel_aubeOff.png">
-          <img src="/images/projects/minecraftShader/explanation/ciel_aubeOff.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/ciel_aubeOn.png">
-          <img src="/images/projects/minecraftShader/explanation/ciel_aubeOn.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/ciel_nuitOff.png">
-          <img src="/images/projects/minecraftShader/explanation/ciel_nuitOff.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/ciel_nuitOn.png">
-          <img src="/images/projects/minecraftShader/explanation/ciel_nuitOn.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/ciel_nuitOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/ciel_nuitOn.png"
+        />
+        <figcaption>Nouveau ciel - nuit (sans / avec)</figcaption>
       </figure>
       <p>Les conditions météorologiques modifient également l’apparence du ciel. Lorsqu’il pleut, celui-ci adopte un ton gris, qui s’assombri en cas d’orage. Dans ces situations, les étoiles sont masquées et la luminosité du soleil ou de la lune est fortement réduite, créant une ambiance plus lourde et plus cohérente visuellement.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/sky_rainOff.png">
-          <img src="/images/projects/minecraftShader/explanation/sky_rainOff.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/sky_rainOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/sky_rainOn.png"
+        />
+        <figcaption>Nouveau ciel - pluie (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/sky_rainOn.png">
-          <img src="/images/projects/minecraftShader/explanation/sky_rainOn.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/sky_thunderOff.png">
-          <img src="/images/projects/minecraftShader/explanation/sky_thunderOff.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/sky_thunderOn.png">
-          <img src="/images/projects/minecraftShader/explanation/sky_thunderOn.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/sky_thunderOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/sky_thunderOn.png"
+        />
+        <figcaption>Nouveau ciel - orage (sans / avec)</figcaption>
       </figure>
       <h2>3.2 Brouillard</h2>
       <p>
@@ -582,38 +510,29 @@ export function Body() {
       </p>
       <p>Pour y remédier, un brouillard atmosphérique a été mis en place. Son rôle est d&#x27;assurer un fondu progressif entre les couleurs du terrain et celles du ciel, créant ainsi une transition plus cohérente et naturelle. Ce brouillard devient également plus dense dans les zones souterraines, accentuant l’effet d’enfermement et la perte de repères visuels.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/fog_off.png">
-          <img src="/images/projects/minecraftShader/explanation/fog_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/fog_on.png">
-          <img src="/images/projects/minecraftShader/explanation/fog_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/fog_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/fog_on.png"
+        />
+        <figcaption>Nouveau ciel - orage (sans / avec)</figcaption>
       </figure>
       <p>Un second type de brouillard, plus complexe, a aussi été intégré : le brouillard volumétrique. Contrairement au brouillard traditionnel basé uniquement sur la distance entre un point de la scène et la caméra, cette version échantillonne l’espace en plusieurs segments successifs. Cela permet de créer des effets atmosphériques en volume, s’inscrivant directement dans l’environnement 3D du joueur.</p>
       <p>
         Ce principe a notamment été exploité pour simuler des light shafts (<em>rayons crépusculaires</em>), en accumulant la lumière directe diffusée dans le brouillard et en prenant en compte les zones d’ombre de façon volumétrique. La couleur de ces rayons est directement liée à celle de la lumière incidente (soleil ou lune), tandis que leur densité varie selon l&#x27;altitude : plus concentrée à basse altitude, près du niveau de la mer, et atténuée en hauteur, afin d&#x27;obtenir un rendu plus crédible et subtil.
       </p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/volfog_jourOff.png">
-          <img src="/images/projects/minecraftShader/explanation/volfog_jourOff.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/volfog_jourOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/volfog_jourOn.png"
+        />
+        <figcaption>Brouillard volumétrique - jour (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/volfog_jourOn.png">
-          <img src="/images/projects/minecraftShader/explanation/volfog_jourOn.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/volfog_nuitOff.png">
-          <img src="/images/projects/minecraftShader/explanation/volfog_nuitOff.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/volfog_nuitOn.png">
-          <img src="/images/projects/minecraftShader/explanation/volfog_nuitOn.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/volfog_nuitOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/volfog_nuitOn.png"
+        />
+        <figcaption>Brouillard volumétrique - nuit (sans / avec)</figcaption>
       </figure>
       <h2>3.3 Vent</h2>
       <p>Certains éléments de décor ont été animés de manière procédurale afin de simuler la présence du vent dans le jeu. Cette animation concerne principalement la végétation ainsi que la surface de l’eau. Pour créer ces mouvements naturels, un bruit de Perlin est utilisé directement dans le vertex shader, ce qui permet de modifier les positions des sommets de façon fluide et réaliste, simulant ainsi le balancement des feuilles, ou les ondulations de l’eau.</p>
@@ -632,14 +551,11 @@ export function Body() {
       <p>Le premier effet de post-traitement mis en place est un algorithme d’anti-aliasing temporel. Bien que le jeu dispose déjà de plusieurs niveaux de détails pour accélérer le rendu et réduire l’aliasing, la nature pixelisée des graphismes et la composition du terrain en blocs génèrent encore beaucoup d’artefacts visuels, particulièrement des effets d’aliasing qui peuvent perturber l’expérience visuelle.</p>
       <p>L’implémentation du Temporal Anti-Aliasing permet de réduire efficacement ces effets en exploitant les informations temporelles entre plusieurs images consécutives, offrant ainsi un rendu plus lisse et agréable à l’œil.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/taazoom_off.png">
-          <img src="/images/projects/minecraftShader/explanation/taazoom_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/taazoom_on.png">
-          <img src="/images/projects/minecraftShader/explanation/taazoom_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/taazoom_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/taazoom_on.png"
+        />
+        <figcaption>TAA dans une image zommée (sans / avec)</figcaption>
       </figure>
       <h2>4.2 Bloom</h2>
       <p>L’un des effets de post-traitement les plus appréciés pour son impact visuel est le bloom. Cet effet vise à simuler un phénomène optique naturel qui se produit lorsque la lumière d’une source particulièrement intense dépasse la capacité de perception d’un capteur ou d’un œil, entraînant une sorte de halo lumineux qui s’étend au-delà de la source elle-même. Ce phénomène est très présent en photographie et dans la vision humaine, surtout face à des sources lumineuses fortes comme le soleil, des lampes ou des reflets.</p>
@@ -664,34 +580,25 @@ export function Body() {
       </ol>
       <p>Le bloom est ainsi un effet important pour enrichir le rendu visuel, renforçant la sensation de luminosité, et accentuant visuellement les zones très éclairées de l’image, ce qui ajoute du réalisme et une esthétique plus immersive.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/bloom_dayOff.png">
-          <img src="/images/projects/minecraftShader/explanation/bloom_dayOff.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/bloom_dayOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/bloom_dayOn.png"
+        />
+        <figcaption>Bloom - jour (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/bloom_dayOn.png">
-          <img src="/images/projects/minecraftShader/explanation/bloom_dayOn.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/bloom_nightOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/bloom_nightOn.png"
+        />
+        <figcaption>Bloom - nuit (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/bloom_nightOff.png">
-          <img src="/images/projects/minecraftShader/explanation/bloom_nightOff.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/bloom_nightOn.png">
-          <img src="/images/projects/minecraftShader/explanation/bloom_nightOn.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/emissive_on.png">
-          <img src="/images/projects/minecraftShader/explanation/emissive_on.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/bloom_on.png">
-          <img src="/images/projects/minecraftShader/explanation/bloom_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/emissive_on.png"
+          imageOn="/images/projects/minecraftShader/explanation/bloom_on.png"
+        />
+        <figcaption>Bloom - émissivité (sans / avec)</figcaption>
       </figure>
       <h2>4.3 Profondeur de champ</h2>
       <p>
@@ -713,37 +620,35 @@ export function Body() {
       <p>Un flou gaussien est ensuite appliqué au plan proche et à l’arrière-plan, en fonction de leur distance relative au plan focal. Plus un point s’en éloigne, plus l’intensité du flou augmente.</p>
       <p>Il est important ici de préserver la cohérence des contours entre les plans : par exemple, les pixels du plan proche ne doivent pas se mélanger avec ceux de l’arrière-plan lors du flou. Pour cela, des masques de séparation sont utilisés, permettant d’éviter les artefacts de &quot;bavures&quot; entre plans de profondeur différentes.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/dof_dayOff.png">
-          <img src="/images/projects/minecraftShader/explanation/dof_dayOff.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/dof_dayOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/dof_dayOn.png"
+        />
+        <figcaption>Profondeur de champ - jour (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/dof_dayOn.png">
-          <img src="/images/projects/minecraftShader/explanation/dof_dayOn.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/dof_nightOff.png">
-          <img src="/images/projects/minecraftShader/explanation/dof_nightOff.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/dof_nightOn.png">
-          <img src="/images/projects/minecraftShader/explanation/dof_nightOn.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/dof_nightOff.png"
+          imageOn="/images/projects/minecraftShader/explanation/dof_nightOn.png"
+        />
+        <figcaption>Profondeur de champ - nuit (sans / avec)</figcaption>
       </figure>
       <h3>Effet de Bokeh</h3>
       <p>Enfin, un effet de Bokeh est ajouté aux objets lumineux situés en dehors de la mise au point. Le Bokeh désigne ces formes floues et diffuses que produisent les sources de lumière lorsqu&#x27;elles sont hors focus, souvent visibles en photographie nocturne.</p>
       <p>Dans ce projet, afin de conserver la cohérence avec le style graphique pixelisé du jeu, les formes de Bokeh ne sont pas circulaires comme en photographie classique, mais carrées. Cela renforce à la fois l’aspect stylistique du rendu et l’originalité de l’intégration de l’effet.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/dof_dayBokeh.png">
-          <img src="/images/projects/minecraftShader/explanation/dof_dayBokeh.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/dof_dayOn.png"
+          imageOn="/images/projects/minecraftShader/explanation/dof_dayBokeh.png"
+        />
+        <figcaption>Effet de Bokeh - jour (sans / avec)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/dof_nightbokeh.png">
-          <img src="/images/projects/minecraftShader/explanation/dof_nightbokeh.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/dof_nightOn.png"
+          imageOn="/images/projects/minecraftShader/explanation/dof_nightbokeh.png"
+        />
+        <figcaption>Effet de Bokeh - nuit (sans / avec)</figcaption>
       </figure>
       <h2>4.4 État du joueur</h2>
       <p>Pour renforcer l’immersion et le lien entre l’état du personnage et la perception visuelle du joueur, plusieurs effets de post-traitement contextuels ont été mis en place. Ces effets ne sont pas seulement esthétiques, ils participent à la lisibilité du gameplay en transmettant des informations physiologiques du personnage incarné par le joueur.</p>
@@ -779,57 +684,39 @@ export function Body() {
       <h3>Absorption lumineuse</h3>
       <p>Lorsqu’un joueur entre sous l’eau, le spectre lumineux perçu change drastiquement. Cet effet est simulé en filtrant dynamiquement la lumière ambiante et directe, ainsi que le brouillard atmosphérique, afin de reproduire le phénomène d’absorption spectrale. Les longueurs d’onde les plus chaudes (rouge, orange) disparaissent rapidement, laissant une dominante bleu caractéristique des environnements subaquatiques.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/underwater_off.png">
-          <img src="/images/projects/minecraftShader/explanation/underwater_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/underwater_on.png">
-          <img src="/images/projects/minecraftShader/explanation/underwater_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/underwater_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/underwater_on.png"
+        />
+        <figcaption>Absorption (sans / avec)</figcaption>
       </figure>
       <h3>Caustiques</h3>
-      <p>Pour enrichir le rendu des fonds marins, des caustiques animées sont projetées sur les surfaces immergées, simulant les motifs lumineux créés par la réfraction des rayons solaires à travers la surface agitée de l’eau. Deux approches sont utilisées :</p>
-      <ul>
-        <li>Une première méthode repose sur l’usage direct de la texture animée de la surface de l’eau, permettant de garder un style plus proche du jeu de base.</li>
-      </ul>
-      <ul>
-        <li>Une seconde méthode génère les motifs via un bruit de Perlin animé, offrant une solution procédurale plus réaliste.</li>
-      </ul>
+      <p>Pour enrichir le rendu des fonds marins, des caustiques animées sont projetées sur les surfaces immergées, simulant les motifs lumineux créés par la réfraction des rayons solaires à travers la surface agitée de l’eau. La méthode utilisé repose sur l’usage direct de la texture animée de la surface de l’eau, permettant de garder un style plus proche du jeu de base.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/caustic_off.png">
-          <img src="/images/projects/minecraftShader/explanation/caustic_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/caustic_vanilla.png">
-          <img src="/images/projects/minecraftShader/explanation/caustic_vanilla.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/caustic_custom.png">
-          <img src="/images/projects/minecraftShader/explanation/caustic_custom.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/caustic_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/caustic_vanilla.png"
+        />
+        <figcaption>Caustique (sans / avec)</figcaption>
       </figure>
       <h3>Lumière volumétrique sous-marine</h3>
       <p>Les puis de lumière visibles sous l’eau sont générés en utilisant un modèle volumétrique similaire à celui utilisé dans l’atmosphère, mais ici animé par du bruit de Perlin 3D afin de simuler les variations de l’intensité lumineuse dû au mouvement présent à la surface de l’eau.</p>
       <p>Ce procédé crée des colonnes de lumière fluctuantes, renforçant l’immersion et la dynamique des environnements marin.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/underwater_on.png">
-          <img src="/images/projects/minecraftShader/explanation/underwater_on.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/underwater_volLight.png">
-          <img src="/images/projects/minecraftShader/explanation/underwater_volLight.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/underwater_on.png"
+          imageOn="/images/projects/minecraftShader/explanation/underwater_volLight.png"
+        />
+        <figcaption>Lumière volumétrique (sans / avec)</figcaption>
       </figure>
       <h3>Réfraction</h3>
       <p>Enfin, une légère distorsion de la scène est appliquée lorsque le joueur se trouve sous l’eau. Cet effet de réfraction repose sur la modification des coordonnées d’échantillonnage dans le fragment shader, déviées à l’aide d’un bruit directionnel simulant les déformations optiques dû au mouvement du milieu aquatique. Cette distorsion légère donne une sensation de submersion et de vision réfracté à travers le liquide.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/underwater_refraction.png">
-          <img src="/images/projects/minecraftShader/explanation/underwater_refraction.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/underwater_volLight.png"
+          imageOn="/images/projects/minecraftShader/explanation/underwater_refraction.png"
+        />
+        <figcaption>Réfraction (sans / avec)</figcaption>
       </figure>
       <h2>5.2 Nether</h2>
       <p>Le Nether constitue l’un des environnements les plus hostiles et distincts du jeu. Cette dimension infernale, caractérisée par des paysages de roche volcanique, de lacs de lave et une atmosphère suffocante, impose un traitement visuel entièrement spécifique pour renforcer sa singularité et son intensité dramatique.</p>
@@ -837,22 +724,21 @@ export function Body() {
       <p>La première adaptation visuelle consiste à modifier la teinte globale des lumières et du brouillard en fonction de la zone explorée dans le Nether. L’éclairage est alors filtrer par les couleurs correspondant au biome dans lequel le joueur se trouve, rejoignant la teinte du brouillard. Ces variations permettent la cohérence chromatique de l’environnement.</p>
       <p>En parallèle, l’intensité de la lumière ambiante a été augmentée dans cette dimension. Cela permet de simuler la manière dont la lumière de la lave et des matériaux incandescents semble inonder l’espace environnant, tout en améliorant la lisibilité du terrain.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/nether_off.png">
-          <img src="/images/projects/minecraftShader/explanation/nether_off.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/nether_on.png">
-          <img src="/images/projects/minecraftShader/explanation/nether_on.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/nether_off.png"
+          imageOn="/images/projects/minecraftShader/explanation/nether_on.png"
+        />
+        <figcaption>Atmosphère (sans / avec)</figcaption>
       </figure>
       <h3>Brouillard volumétrique</h3>
       <p>Un brouillard volumétrique a été ajouté pour simuler de larges panaches de fumée s’élevant verticalement, symbolisant les émanations des lacs de laves ou suggérant une activité géothermique intense. Ce brouillard animé est contrôlé à l’aide d’un bruit de Perlin 3D appliqué dans le fragment shader, permettant de générer des mouvements fluides et organiques.</p>
       <p>Sa densité est proportionnelle à l’altitude : plus on se rapproche de la hauteur des lacs de lave, plus ces fumées sont présentes et opaques ; à l’inverse, elles s’estompent à mesure que l’on s’élève au-dessus du niveau de la lave.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/nether_vollight.png">
-          <img src="/images/projects/minecraftShader/explanation/nether_vollight.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/nether_on.png"
+          imageOn="/images/projects/minecraftShader/explanation/nether_vollight.png"
+        />
+        <figcaption>Brouillard volumétrique (sans / avec)</figcaption>
       </figure>
       <h3>Animation thermique de la végétation</h3>
       <p>Les rares éléments végétaux du Nether bénéficient d’un traitement spécifique. Leurs mouvements sont animés de manière à évoquer des courants thermiques ascendants. Contrairement au vent classique utilisé dans les zones tempérées, l’animation repose ici sur des perturbations verticales, générées par un bruit de Perlin 2D, simulant les ondulations provoquées par la chaleur.</p>
@@ -864,40 +750,108 @@ export function Body() {
       <h3>Réfraction thermique</h3>
       <p>Pour souligner la chaleur ambiante omniprésente, un effet de réfraction thermique est appliqué sur l’image, en particulier autour des sources de chaleur comme les lacs de lave. Cet effet repose sur la distorsion dynamique de l’image, basée sur un bruit de Perlin. Le rendu final rappelle les vagues de chaleur visibles dans l’air au-dessus d’un feu ou d’un désert.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/nether_refraction.png">
-          <img src="/images/projects/minecraftShader/explanation/nether_refraction.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/nether_vollight.png"
+          imageOn="/images/projects/minecraftShader/explanation/nether_refraction.png"
+        />
+        <figcaption>Réfraction (sans / avec)</figcaption>
       </figure>
       <h2>5.3 End</h2>
       <p>La dernière dimension explorée dans le jeu est appelée l’End. Il s’agit d’un monde étrange, composé d’îles rocheuses qui semblent léviter dans le vide, suspendues dans une atmosphère énigmatique.</p>
       <h3>Ambiance lumineuse</h3>
       <p>Pour renforcer cette ambiance surnaturelle, la lumière ambiante a été ajustées afin d’adopter une teinte violette froide. Ce choix permet d’évoquer l’étrangeté cosmique de cet environnement et de marquer une rupture nette avec les autres dimensions du jeu.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/end_base.png">
-          <img src="/images/projects/minecraftShader/explanation/end_base.png" />
-        </a>
-      </figure>
-      <figure>
-        <a href="/images/projects/minecraftShader/explanation/end_lighting.png">
-          <img src="/images/projects/minecraftShader/explanation/end_lighting.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/end_base.png"
+          imageOn="/images/projects/minecraftShader/explanation/end_lighting.png"
+        />
+        <figcaption>Lumière ambiante (sans / avec)</figcaption>
       </figure>
       <h3>Apparence du ciel</h3>
       <p>Le ciel a été changé en une teinte noire, évoquant le vide spatial. Ce fond sombre est ponctué d’étoiles générées procéduralement, renforçant l’aspect infini et isolé de l’End. Cette apparence évoque à la fois l’espace intersidéral et un monde détaché des lois naturelles.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/end_sky.png">
-          <img src="/images/projects/minecraftShader/explanation/end_sky.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/end_lighting.png"
+          imageOn="/images/projects/minecraftShader/explanation/end_sky.png"
+        />
+        <figcaption>Ciel étoilé (sans / avec)</figcaption>
       </figure>
       <h3>Effets volumétriques</h3>
       <p>Des faisceaux lumineux colorés ont été intégrés sous forme de halos volumétriques. Ces effets utilisent un échantillonnage volumétrique en espace écran (similaire au brouillard volumétrique), et apparaissent ponctuellement dans l’environnement. Ils donnent l’impression que certaines zones sont traversées par des flux d’énergie, évoquant des aurores boréales, accentuant l’ambiance énigmatique de cette dimension.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/end_volLight.png">
-          <img src="/images/projects/minecraftShader/explanation/end_volLight.png" />
-        </a>
+        <ImageComparison 
+          imageOff="/images/projects/minecraftShader/explanation/end_sky.png"
+          imageOn="/images/projects/minecraftShader/explanation/end_volLight.png"
+        />
+        <figcaption>Effets volumétriques (sans / avec)</figcaption>
       </figure>
       <h1>🖼️ Gallerie</h1>
       <hr />
+      <p>Voici quelques images permettant de comparer différentes scènes du jeu avec les graphismes originels (à gauche) et les résultats obtenus avec mon shader (à droite) :</p>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/pbr" />
+        <figcaption>Intérieur</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/cover" />
+        <figcaption>Bord de lac</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/savane" />
+        <figcaption>Savane</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/jungle" />
+        <figcaption>Jungle</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/pine" />
+        <figcaption>Forêt de pins</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/village" />
+        <figcaption>Village de nuit</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/badland" />
+        <figcaption>Grand canyon</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/ice" />
+        <figcaption>Terres gelées</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/surface/mangrove" />
+        <figcaption>Mangrove</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/cave/lush" />
+        <figcaption>Caverne luxuriante</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/cave/deepdark" />
+        <figcaption>Caverne sombre</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/nether/netherredforest" />
+        <figcaption>Nether : forêt rouge</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/nether/netherblueforest" />
+        <figcaption>Nether : forêt bleue</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/nether/netherdelta" />
+        <figcaption>Nether : deltas de basalte</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/nether/nethersoul" />
+        <figcaption>Nether : vallée des âmes</figcaption>
+      </figure>
+      <figure>
+        <ImageComparison image="/images/projects/minecraftShader/galerie/end/endcity" />
+        <figcaption>End : cité</figcaption>
+      </figure>
       <h1>Ressources supplémentaires</h1>
       <hr />
     </div>
