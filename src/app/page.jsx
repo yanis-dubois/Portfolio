@@ -1,4 +1,5 @@
-import {Section, Card, Studies, Projects, Links, Footer} from "../utils/staticUI.jsx"
+import {Section, Card, Studies, Projects, Links, Footer, Background} from "../utils/staticUI.jsx"
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -7,11 +8,15 @@ export default function Home() {
       {/* Header */}
       {/* --------------------------------------------------------------------------- */}
       {/* --------------------------------------------------------------------------- */}
-      <header className="p-6 bg-dark text-light h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url(/images/background/monolyth.png)" }}>
-        <div className="flex flex-col items-center text-center text-shadow-lg/50">
+      <header>
+        <Background 
+          src="/images/background/monolyth.png" 
+          parentStyle="text-light h-screen flex items-center justify-center" 
+          childStyle="flex flex-col items-center text-light text-center text-shadow-md/50"
+        >
           <h1 className="text-8xl font-bold">Yanis Dubois</h1>
-          <p className="mt-4 text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>  
-        </div>
+          <p className="mt-4 text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
+        </Background>
       </header>
 
       {/* Main */}
@@ -71,78 +76,90 @@ export default function Home() {
 
         {/* Compétences */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-fixed bg-cover bg-center" image="/images/background/katanaZero.png" body="min-h-[80vh] flex flex-col items-center justify-center">
-          <h1 className="text-center text-light text-4xl font-bold mb-12">⚙️ Compétences</h1>
-          <div className="grid gap-6 lg:grid-cols-3">
+        <Background 
+          src="/images/background/katanaZero.png" 
+          parentStyle="min-h-[80vh] flex flex-col items-center justify-center" 
+          childStyle=""
+        >
+          <Section>
+            <h1 className="text-center text-light text-4xl font-bold mb-12">⚙️ Compétences</h1>
+            <div className="grid gap-6 lg:grid-cols-3">
 
-            <Card title="💬 Langages" variant="translucent" body="max-w-96 mx-auto">
-              <p className="mb-2">
-                Mon parcours m’a conduit à développer principalement en C, C++, C#, Java, Python et OpenGL, aussi bien pour la création d’applications que pour la mise en œuvre de preuves de concepts.
-              </p>
-              <p className="">
-                J’ai également de bonnes bases en développement web (HTML, CSS, JavaScript, React, Next.js, Tailwind) ainsi qu’en manipulation de bases de données relationnelles via SQL.
-              </p>
-            </Card>
+              <Card title="💬 Langages" variant="translucent" body="max-w-96 mx-auto">
+                <p className="mb-2">
+                  Mon parcours m’a conduit à développer principalement en C, C++, C#, Java, Python et OpenGL, aussi bien pour la création d’applications que pour la mise en œuvre de preuves de concepts.
+                </p>
+                <p className="">
+                  J’ai également de bonnes bases en développement web (HTML, CSS, JavaScript, React, Next.js, Tailwind) ainsi qu’en manipulation de bases de données relationnelles via SQL.
+                </p>
+              </Card>
 
-            <Card title="🛠️ Techniques" variant="translucent" body="max-w-96 mx-auto">
-              <p className="mb-2">
-                J’ai eu l’occasion d’utiliser un large éventail d’environnements de développement (VS Code, IntelliJ, Anaconda, Android Studio, Visual Studio, …) ainsi que des outils de gestion de versions comme Git.
-              </p>
-              <p className="mb-2">
-                Plus récemment, je me suis formé à l’utilisation de moteurs de rendu et d’outils de création graphique tels que Godot, Unity et Blender.
-              </p>
-              <p className="">
-                En matière de gestion de projet, je suis familier avec le principe de Scrum, ainsi que la modélisation à l’aide du formalisme UML.
-              </p>
-            </Card>
+              <Card title="🛠️ Techniques" variant="translucent" body="max-w-96 mx-auto">
+                <p className="mb-2">
+                  J’ai eu l’occasion d’utiliser un large éventail d’environnements de développement (VS Code, IntelliJ, Anaconda, Android Studio, Visual Studio, …) ainsi que des outils de gestion de versions comme Git.
+                </p>
+                <p className="mb-2">
+                  Plus récemment, je me suis formé à l’utilisation de moteurs de rendu et d’outils de création graphique tels que Godot, Unity et Blender.
+                </p>
+                <p className="">
+                  En matière de gestion de projet, je suis familier avec le principe de Scrum, ainsi que la modélisation à l’aide du formalisme UML.
+                </p>
+              </Card>
 
-            <Card title="📖 Académiques" variant="translucent" body="max-w-96 mx-auto">
-              <p className="mb-2">
-               Ma formation m’a habitué à lire, analyser et synthétiser des articles scientifiques, mais aussi à en rédiger.
-              </p>
-              <p className="">
-                J’ai également participé à l’élaboration de preuves de concepts dans le cadre de projets orientés recherche, mêlant réflexion théorique et implémentation concrète.
-              </p>
-            </Card>
+              <Card title="📖 Académiques" variant="translucent" body="max-w-96 mx-auto">
+                <p className="mb-2">
+                Ma formation m’a habitué à lire, analyser et synthétiser des articles scientifiques, mais aussi à en rédiger.
+                </p>
+                <p className="">
+                  J’ai également participé à l’élaboration de preuves de concepts dans le cadre de projets orientés recherche, mêlant réflexion théorique et implémentation concrète.
+                </p>
+              </Card>
 
-          </div>
-        </Section>
+            </div>
+          </Section>
+        </Background>
 
         {/* Loisirs */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-fixed bg-cover bg-center" image="/images/background/scavengersReign.png" body="min-h-[80vh] flex flex-col items-center justify-center">
-          <h1 className="text-center text-light text-4xl font-bold mb-12">🎲 Loisirs</h1>
-          <div className="grid gap-6 lg:grid-cols-3">
+        <Background 
+          src="/images/background/scavengersReign.png" 
+          parentStyle="min-h-[80vh] flex flex-col items-center justify-center" 
+          childStyle=""
+        >
+          <Section>
+            <h1 className="text-center text-light text-4xl font-bold mb-12">🎲 Loisirs</h1>
+            <div className="grid gap-6 lg:grid-cols-3">
 
-            <Card title="🎵 Musique" variant="translucent" body="max-w-96 mx-auto">
-              <p className="mb-2">
-                Passionné de musique depuis de nombreuses années, je pratique la batterie depuis 14 ans.
-              </p>
-              <p>
-                Je m’intéresse également à la création musicale assistée par ordinateur, notamment à travers l’exploration de synthétiseurs virtuels sur Ableton Live.
-              </p>
-            </Card>
+              <Card title="🎵 Musique" variant="translucent" body="max-w-96 mx-auto">
+                <p className="mb-2">
+                  Passionné de musique depuis de nombreuses années, je pratique la batterie depuis 14 ans.
+                </p>
+                <p>
+                  Je m’intéresse également à la création musicale assistée par ordinateur, notamment à travers l’exploration de synthétiseurs virtuels sur Ableton Live.
+                </p>
+              </Card>
 
-            <Card title="🎬 Cinéma et Bandes Dessinées" variant="translucent" body="max-w-96 mx-auto">
-              <p className="mb-2">
-                Je puise beaucoup d’inspiration dans les univers de la science-fiction, que ce soit à travers le cinéma, l’animation, les bandes dessinées ou les mangas.
-              </p>
-              <p>
-                Ces formes d’expression nourrissent mon imaginaire et influencent souvent mes projets créatifs.
-              </p>
-            </Card>
+              <Card title="🎬 Cinéma et Bandes Dessinées" variant="translucent" body="max-w-96 mx-auto">
+                <p className="mb-2">
+                  Je puise beaucoup d’inspiration dans les univers de la science-fiction, que ce soit à travers le cinéma, l’animation, les bandes dessinées ou les mangas.
+                </p>
+                <p>
+                  Ces formes d’expression nourrissent mon imaginaire et influencent souvent mes projets créatifs.
+                </p>
+              </Card>
 
-            <Card title="👾 Jeux Vidéo" variant="translucent" body="max-w-96 mx-auto">
-              <p className="mb-2">
-                Amateur de jeux vidéo, j’apprécie particulièrement les univers immersifs et les expériences narratives originales.
-              </p>
-              <p>
-                Cette passion m’a naturellement conduit à m’intéresser au développement de jeux, notamment à l’occasion de Game Jams, où j’ai pu expérimenter la création de jeux vidéo en équipe.
-              </p>
-            </Card>
+              <Card title="👾 Jeux Vidéo" variant="translucent" body="max-w-96 mx-auto">
+                <p className="mb-2">
+                  Amateur de jeux vidéo, j’apprécie particulièrement les univers immersifs et les expériences narratives originales.
+                </p>
+                <p>
+                  Cette passion m’a naturellement conduit à m’intéresser au développement de jeux, notamment à l’occasion de Game Jams, où j’ai pu expérimenter la création de jeux vidéo en équipe.
+                </p>
+              </Card>
 
-          </div>
-        </Section>
+            </div>
+          </Section>
+        </Background>
 
         {/* Projets Pro */}
         {/* --------------------------------------------------------------------------- */}

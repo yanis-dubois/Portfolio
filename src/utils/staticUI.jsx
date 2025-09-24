@@ -5,7 +5,7 @@ export function Section({ children, background = "", body = "", image = "" }) {
   return (
     <SectionBackground background={background} image={image}>
       {/* background */}
-      <SectionBody body={body}>
+      <SectionBody body={body} style={{clipPath: `inset(0 0 0 0)`}}>
         {/* properties for childrens */}
         {children}
       </SectionBody>
@@ -28,7 +28,7 @@ export function SectionBody({ children, body = "" }) {
   const bodyStyle = `p-6 mx-auto max-w-5xl ${body}`;
 
   return (
-    <div className={bodyStyle}>
+    <div className={bodyStyle} style={{clipPath: `inset(0 0 0 0)`}}>
       {children}
     </div>
   );
@@ -157,5 +157,23 @@ export function PDF({ url }) {
 export function Git({ url, title="Accédez au code source →" }) {
   return (
     <Links url={url} icon="/images/icons/Git_icon.png" title={title} type="icon"/>
+  );
+}
+
+export function Background({ children, src, parentStyle, childStyle }) {
+  return (
+    <div className={`relative ${parentStyle}`} style={{ clipPath: "inset(0 0 0 0)" }}>
+
+      {/* Background */}
+      <div className="fixed inset-0 -z-1" >
+        <Image src={src} alt="" fill className="object-cover"/>
+      </div>
+
+      {/* Children */}
+      <div className={`relative z-1 ${childStyle}`}>
+        {children}
+      </div>
+
+    </div>
   );
 }
