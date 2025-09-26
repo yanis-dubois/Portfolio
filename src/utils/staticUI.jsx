@@ -13,12 +13,9 @@ export function Section({ children, background = "", body = "", image = "" }) {
   );
 }
 
-export function SectionBackground({ children, background = "", image = "" }) {
-  const backgroundStyle = `${background}`;
-  const imageStyle = `url('${image}')`;
-
+export function SectionBackground({ children, background = "", image }) {
   return (
-    <div className={backgroundStyle} style={{ backgroundImage: imageStyle }}>
+    <div className={background} style={image ? { backgroundImage: `url('${image}')` } : {}}>
       {children}
     </div>
   );
@@ -34,16 +31,17 @@ export function SectionBody({ children, body = "" }) {
   );
 }
 
-export function Card({ children, title, titleStyle = "", body = "", variant = "opaque", type = "", image = null }) {
+export function Card({ children, title, titleStyle = "", body = "", variant = "opaque", image = null }) {
   const base = `text-light-soft border border-light-soft/10 shadow-md rounded-2xl ${body}`;
   const styles = {
-    opaque: `${base} bg-dark`,
-    translucent: `${base} bg-dark/70 backdrop-blur-sm`,
+    opaque: `${base} bg-dark-deep/50`,
+    project: `${base} bg-radial-[at_100%_100%] from-dark-soft to-dark-deep`,
+    translucent: `${base} bg-dark-deep opacity-92 backdrop-blur-sm`,
   };
-  const titleStyleM = `text-light text-xl font-bold mb-4 ${titleStyle}`;
+  const titleStyleM = `text-light text-xl font-bold mb-4 text-shadow-md/50 ${titleStyle}`;
 
   // card with an image
-  if (type === "project") {
+  if (variant === "project") {
     return (
       <div className={styles[variant]}>
         <div className="relative">
@@ -66,7 +64,7 @@ export function Card({ children, title, titleStyle = "", body = "", variant = "o
 export function Projects({ title, place, date, keywords, pageLink }) {
   return (
     <div>
-      {title && <h2 className="text-light text-xl font-bold">{title}</h2>}
+      {title && <h2 className="text-light text-xl font-bold text-shadow-md/50">{title}</h2>}
 
       <div className="flex pt-2 pb-2">
         {keywords.map((word, index) => (
