@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Section({ children, background = "", body = "", image = "" }) {
+export function Section({ children, background = "", body = "", image = "", id }) {
   return (
-    <SectionBackground background={background} image={image}>
+    <SectionBackground background={background} image={image} id={id}>
       {/* background */}
       <SectionBody body={body} style={{clipPath: `inset(0 0 0 0)`}}>
         {/* properties for childrens */}
@@ -13,9 +13,9 @@ export function Section({ children, background = "", body = "", image = "" }) {
   );
 }
 
-export function SectionBackground({ children, background = "", image }) {
+export function SectionBackground({ children, background = "", image, id }) {
   return (
-    <div className={background} style={image ? { backgroundImage: `url('${image}')` } : {}}>
+    <div className={background} style={image ? { backgroundImage: `url('${image}')` } : {}} id={id}>
       {children}
     </div>
   );
@@ -142,8 +142,23 @@ export function NavLinks({ emoji, icon, title, url, type = "emoji" }) {
     );
 }
 
+export function TitleLinks({ emoji, icon, title, url, type = "emoji" }) {
+  return (
+      <div className="text-light-soft text-3xl">
+        <Link href={url}>
+          {emoji} <span className="hover:text-light">{title}</span>
+        </Link>
+      </div>
+    );
+}
+
 export function Footer() {
-  return <footer className="bg-dark-soft p-6 text-center text-sm text-light-dark">© 2025 Yanis Dubois — Libre et Open Source</footer>;
+  return (
+    <footer className="bg-dark-soft p-6 text-center text-sm text-light-dark">
+      © 2025 Yanis Dubois — Libre et Open Source, hébergé via GitHub Pages<br/>
+      Crédits : image #Compétences - Unsplash ; image #Loisirs - Scavengers Reign par Joseph Bennett et Charles Huettner
+    </footer>
+  );
 }
 
 export function PDF({ url }) {

@@ -1,5 +1,5 @@
-import {Section, Card, Studies, Projects, Links, Footer, Background} from "../utils/staticUI.jsx"
-import Image from "next/image";
+import {Section, Card, Studies, Projects, Links, TitleLinks, Footer, Background} from "../utils/staticUI.jsx"
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -11,11 +11,22 @@ export default function Home() {
       <header>
         <Background 
           src="/images/background/monolyth.png" 
-          parentStyle="text-light h-screen flex items-center justify-center" 
-          childStyle="flex flex-col items-center text-light text-center text-shadow-md/50"
+          parentStyle="h-screen flex items-center justify-center" 
+          childStyle="relative h-screen flex flex-col items-center justify-center text-light text-center text-shadow-md/50"
         >
-          <h1 className="text-8xl font-bold">Yanis Dubois</h1>
-          <p className="mt-4 text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
+          <div>
+            <h1 className="text-8xl font-bold">Yanis Dubois</h1>
+            <p className="mt-4 text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
+            <nav className="pt-24 grid gap-6 md:grid-cols-3">
+              <TitleLinks url={"#about"} title="À propos"/>
+              <TitleLinks url={"#projects"} title="Projets"/>
+              <TitleLinks url={"#links"} title="Contact"/>
+            </nav>
+          </div>
+
+          <Link href={"#about"} className="text-light-soft hover:text-light absolute bottom-16">
+            <p className="rotate-45">◢</p>
+          </Link>
         </Background>
       </header>
 
@@ -26,7 +37,7 @@ export default function Home() {
 
         {/* Introduction */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-dark text-light-soft" body="flex flex-col items-center justify-center">
+        <Section id="about" background="bg-dark text-light-soft" body="flex flex-col items-center justify-center">
           <div className="md:grid md:grid-cols-5 md:gap-8">
             {/* Présentation */}
             <div className="md:col-span-3">
@@ -96,7 +107,7 @@ export default function Home() {
                 <p className="">
                   <span className="text-primary-light font-bold">Environnements</span><br/>
                   <span className="text-light">Framework :</span> VS Code, IntelliJ, Anaconda, Android Studio, Visual Studio.<br/>
-                  <span className="text-light">Outils de gestion de versions :</span> Git.<br/>
+                  <span className="text-light">Outil de gestion de versions :</span> Git.<br/>
                   <span className="text-light">Moteurs de rendus :</span> Godot, Unity, Blender.<br/>
                 </p>
               </Card>
@@ -170,7 +181,7 @@ export default function Home() {
 
         {/* Projets Pro */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-dark-deep">
+        <Section id="projects" background="bg-dark-deep">
           <h1 className="text-light text-3xl font-bold mb-12 mt-12 text-shadow-md/50">🖥️ Projets universitaires et professionnels</h1>
 
           <div className="grid gap-6 lg:grid-cols-2">
@@ -246,11 +257,11 @@ export default function Home() {
 
         {/* Contact */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-dark">
+        <Section id="links" background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
-            <Links emoji="📨" title="Envoyez-moi un e-mail →" url={""}/>
+            <Links emoji="📨" title="Envoyez-moi un e-mail →" url={"mailto:yanis.dubois117@gmail.com"}/>
             <Links emoji="📄" title="Consultez mon CV →" url={""}/>
-            <Links emoji="🌐" title="Accédez à mon GitHub →" url={""}/>
+            <Links emoji="🌐" title="Accédez à mon GitHub →" url={"https://github.com/yanis-dubois"}/>
           </div>
         </Section>
 
