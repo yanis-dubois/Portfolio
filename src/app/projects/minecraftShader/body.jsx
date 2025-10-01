@@ -1,3 +1,4 @@
+import {StaticImg, Video} from "../../../utils/media.jsx"
 import {ImageComparison} from "../../../utils/dynamicUI.jsx"
 
 export function Body() {
@@ -14,9 +15,7 @@ export function Body() {
         </div>
         <div>
           <figure>
-            <a href="/images/projects/minecraftShader/galerie/surface/coverON.png">
-              <img src="/images/projects/minecraftShader/galerie/surface/coverON.png" />
-            </a>
+            <StaticImg src="/images/projects/minecraftShader/galerie/surface/coverON.png" />
           </figure>
         </div>
       </div>
@@ -72,9 +71,7 @@ export function Body() {
       </ul>
       <p>Chacune de ces lumières est associée à une couleur RGB dérivée de leur température, multipliée par leur intensité, puis additionnée pour former un éclairage combiné à la surface des objets.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/basic.png">
-          <img src="/images/projects/minecraftShader/explanation/basic.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/basic.png" />
         <figcaption>Premier rendu</figcaption>
       </figure>
       <h3>Lumière ambiante</h3>
@@ -105,15 +102,11 @@ export function Body() {
       </ul>
       <p>L’intensité de la lumière reçue est obtenue via le produit scalaire entre ces deux vecteurs. Plus l’angle entre la lumière et la surface est proche de la perpendiculaire, plus l’éclairement est élevé. Autrement dit, plus un objet fait face à la source de lumière, plus l’intensité lumineuse qu’il reçoit est élevé.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/direct_noon.png">
-          <img src="/images/projects/minecraftShader/explanation/direct_noon.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/direct_noon.png" />
         <figcaption>Midi (lumière zénithale)</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/direct_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/direct_morning.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/direct_morning.png" />
         <figcaption>Matin (lumière provenant de la gauche)</figcaption>
       </figure>
       <h2>1.2 Ajustement des lumières</h2>
@@ -154,21 +147,15 @@ export function Body() {
       </ul>
       <p>Ce système de modulation permet de renforcer la sensation de passage du temps et d’apporter une ambiance visuelle plus cohérente selon le contexte de jeu.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/skyLightColor_noon.png">
-          <img src="/images/projects/minecraftShader/explanation/skyLightColor_noon.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/skyLightColor_noon.png" />
         <figcaption>Midi</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/skyLightColor_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/skyLightColor_morning.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/skyLightColor_morning.png" />
         <figcaption>Matin</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/skyLightColor_night.png">
-          <img src="/images/projects/minecraftShader/explanation/skyLightColor_night.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/skyLightColor_night.png" />
         <figcaption>Nuit</figcaption>
       </figure>
       <h3>Raffinement des lumières artificielles</h3>
@@ -265,15 +252,11 @@ export function Body() {
       <p>Pour intégrer ces ombres, j’ai mis en œuvre la technique bien connue des shadow maps (cartes d’ombre). Cette méthode consiste à effectuer une première passe de rendu depuis le point de vue de la source lumineuse, au cours de laquelle on enregistre la profondeur (distance à la lumière) de chaque fragment visible dans la scène.</p>
       <p>Lors de la seconde passe de rendu, cette fois-ci depuis la caméra du joueur, on peut comparer la profondeur d’un fragment à celle enregistrée dans la shadow map. Si la profondeur actuelle est supérieure à celle enregistrée depuis la source, cela signifie qu’un objet bloque la lumière : le fragment est donc dans l’ombre.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/hardShadow_noon.png">
-          <img src="/images/projects/minecraftShader/explanation/hardShadow_noon.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/hardShadow_noon.png" />
         <figcaption>midi</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/hardShadow_morning.png">
-          <img src="/images/projects/minecraftShader/explanation/hardShadow_morning.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/hardShadow_morning.png" />
         <figcaption>matin</figcaption>
       </figure>
       <p>Pour adoucir la transition entre les zones éclairées et les zones ombrées, j’ai mis en place une technique de filtrage multi-échantillons de la shadow map. Cela permet d’ajouter une zone de pénombre en bordure d’ombre, apportant un rendu plus naturel et visuellement agréable.</p>
@@ -364,21 +347,15 @@ export function Body() {
       </ul>
       <p>Pour simuler la composante spéculaire du rendu, j’ai implémenté le modèle de BRDF Cook-Torrance, largement utilisée dans les moteurs de rendu modernes. Ce modèle prend en compte à la fois le coefficient de Fresnel (réflectance), les microstructures de la surface et la géométrie d’occlusion entre les microfacettes (rugosité), permettant un rendu réaliste des reflets spéculaires.</p>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/specular_off.png">
-          <img src="/images/projects/minecraftShader/explanation/specular_off.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/specular_off.png" />
         <figcaption>sans</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/specular_on.png">
-          <img src="/images/projects/minecraftShader/explanation/specular_on.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/specular_on.png" />
         <figcaption>par matériaux</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/minecraftShader/explanation/specular_pbr.png">
-          <img src="/images/projects/minecraftShader/explanation/specular_pbr.png" />
-        </a>
+        <StaticImg src="/images/projects/minecraftShader/explanation/specular_pbr.png" />
         <figcaption>par texel</figcaption>
       </figure>
       <p>En cohérence avec l’approche pixelisée que j’ai adoptée pour l’ensemble du pipeline de rendu, j’ai également adapté le calcul de la tâche spéculaire : au lieu d’évaluer ce reflet de manière continue sur toute la surface, il est quantifié selon la grille de texture de l’objet. Cela permet de respecter pleinement l’esthétique visuelle du jeu original, tout en apportant un niveau de détail plus poussé et fidèle aux matériaux simulés.</p>
@@ -540,9 +517,7 @@ export function Body() {
       <p>Enfin, ces animations sont activées uniquement lorsque les objets sont situés à l’extérieur. Cette contrainte garantit un contraste marqué entre les zones intérieures, calmes et sans vent, et les zones extérieures où le mouvement dynamique est bien perceptible, renforçant ainsi l’immersion et la cohérence de l’environnement.</p>
       <p>[vidéo]</p>
       <figure>
-        <video controls>
-          <source src="/images/projects/minecraftShader/explanation/vent.mp4" type="video/mp4" />
-        </video>
+        <Video src="/images/projects/minecraftShader/explanation/vent.mp4" type="video/mp4"/>
       </figure>
       <hr />
       <h1>4. Post-traitement</h1>
@@ -656,25 +631,19 @@ export function Body() {
       <p>Lorsque le personnage subit des dégâts et voit ses points de vie diminuer, un effet d’aberration chromatique est progressivement appliqué à l’image. L’amplitude de cet effet augmente de manière non linéaire à mesure que la santé chute.</p>
       <p>En plus de l’intensité croissante, une pulsation temporelle est ajoutée, modulant l’effet à une fréquence variable. Plus le niveau de santé est bas, plus cette pulsation s’accélère, simulant un battement cardiaque affolé, ce qui accentue l’urgence de la situation de manière perceptible.</p>
       <figure>
-        <video controls>
-          <source src="/images/projects/minecraftShader/explanation/vie.mp4" type="video/mp4" />
-        </video>
+        <Video src="/images/projects/minecraftShader/explanation/vie.mp4" type="video/mp4"/>
       </figure>
       <h3>Faim</h3>
       <p>Le système de faim affecte directement les capacités du joueur, notamment sa capacité à courir. Pour renforcer cette contrainte de gameplay, un flou de mouvement a été intégré et devient progressivement plus prononcé à mesure que le niveau de satiété baisse.</p>
       <p>Ce flou donne une impression de lourdeur ou de léthargie, traduisant visuellement la fatigue croissante du personnage. Cet effet rend plus tangible l’importance de la gestion des ressources alimentaires dans l’univers du jeu.</p>
       <figure>
-        <video controls>
-          <source src="/images/projects/minecraftShader/explanation/faim.mp4" type="video/mp4" />
-        </video>
+        <Video src="/images/projects/minecraftShader/explanation/faim.mp4" type="video/mp4"/>
       </figure>
       <h3>Apnée</h3>
       <p>Lorsqu’un joueur reste sous l’eau sans respirer, une désaturation progressive des couleurs est appliquée à l’écran. Cette transition vers une palette plus terne permet de transmettre visuellement la perte d’oxygène, en évoquant un état de conscience altérée ou de vision affaiblie.</p>
       <p>Une fois le niveau d’oxygène épuisé, le personnage commence à perdre de la vie à intervalles réguliers. Pour accentuer ce danger, une pulsation noire est superposée à l’image, synchronisée avec le rythme des dégâts reçus. Ce clignotement donne un sentiment d’étouffement imminent, tout en servant de signal critique sans avoir recours uniquement à l’interface.</p>
       <figure>
-        <video controls>
-          <source src="/images/projects/minecraftShader/explanation/noyade.mp4" type="video/mp4" />
-        </video>
+        <Video src="/images/projects/minecraftShader/explanation/noyade.mp4" type="video/mp4"/>
       </figure>
       <hr />
       <h1>5. Autres Mondes</h1>
@@ -743,9 +712,7 @@ export function Body() {
       <h3>Animation thermique de la végétation</h3>
       <p>Les rares éléments végétaux du Nether bénéficient d’un traitement spécifique. Leurs mouvements sont animés de manière à évoquer des courants thermiques ascendants. Contrairement au vent classique utilisé dans les zones tempérées, l’animation repose ici sur des perturbations verticales, générées par un bruit de Perlin 2D, simulant les ondulations provoquées par la chaleur.</p>
       <figure>
-        <video controls>
-          <source src="/images/projects/minecraftShader/explanation/netherHeat.mp4" type="video/mp4" />
-        </video>
+        <Video src="/images/projects/minecraftShader/explanation/netherHeat.mp4" type="video/mp4"/>
       </figure>
       <h3>Réfraction thermique</h3>
       <p>Pour souligner la chaleur ambiante omniprésente, un effet de réfraction thermique est appliqué sur l’image, en particulier autour des sources de chaleur comme les lacs de lave. Cet effet repose sur la distorsion dynamique de l’image, basée sur un bruit de Perlin. Le rendu final rappelle les vagues de chaleur visibles dans l’air au-dessus d’un feu ou d’un désert.</p>
@@ -790,67 +757,67 @@ export function Body() {
       <p>Voici quelques images permettant de comparer différentes scènes du jeu avec les graphismes originels (à gauche) et les résultats obtenus avec mon shader (à droite) :</p>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/pbr" />
-        <figcaption>Intérieur</figcaption>
+        <figcaption>Intérieur (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/cover" />
-        <figcaption>Bord de lac</figcaption>
+        <figcaption>Bord de lac (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/savane" />
-        <figcaption>Savane</figcaption>
+        <figcaption>Savane (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/jungle" />
-        <figcaption>Jungle</figcaption>
+        <figcaption>Jungle (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/pine" />
-        <figcaption>Forêt de pins</figcaption>
+        <figcaption>Forêt de pins (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/village" />
-        <figcaption>Village de nuit</figcaption>
+        <figcaption>Village de nuit (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/badland" />
-        <figcaption>Grand canyon</figcaption>
+        <figcaption>Grand canyon (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/ice" />
-        <figcaption>Terres gelées</figcaption>
+        <figcaption>Terres gelées (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/surface/mangrove" />
-        <figcaption>Mangrove</figcaption>
+        <figcaption>Mangrove (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/cave/lush" />
-        <figcaption>Caverne luxuriante</figcaption>
+        <figcaption>Caverne luxuriante (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/cave/deepdark" />
-        <figcaption>Caverne sombre</figcaption>
+        <figcaption>Caverne sombre (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/nether/netherredforest" />
-        <figcaption>Nether : forêt rouge</figcaption>
+        <figcaption>Nether : forêt rouge (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/nether/netherblueforest" />
-        <figcaption>Nether : forêt bleue</figcaption>
+        <figcaption>Nether : forêt bleue (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/nether/netherdelta" />
-        <figcaption>Nether : deltas de basalte</figcaption>
+        <figcaption>Nether : deltas de basalte (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/nether/nethersoul" />
-        <figcaption>Nether : vallée des âmes</figcaption>
+        <figcaption>Nether : vallée des âmes (sans / avec)</figcaption>
       </figure>
       <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/end/endcity" />
-        <figcaption>End : cité</figcaption>
+        <figcaption>End : cité (sans / avec)</figcaption>
       </figure>
       <h1>Ressources supplémentaires</h1>
       <hr />

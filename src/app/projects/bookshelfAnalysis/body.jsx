@@ -1,3 +1,5 @@
+import {StaticImg} from "../../../utils/media.jsx"
+
 export function Body() {
   return (
     <div>
@@ -10,7 +12,7 @@ export function Body() {
         </div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/lineDetect.png"><img src="/images/projects/bookshelfAnalysis/lineDetect.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/lineDetect.png" />
           </figure>
         </div>
       </div>
@@ -31,13 +33,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/lineDetect.png"><img src="/images/projects/bookshelfAnalysis/lineDetect.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/lineDetect.png" />
             <figcaption>Détection de lignes</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.38.10.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.38.10.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.38.10.png" />
             <figcaption>Rotation</figcaption>
           </figure>
         </div>
@@ -47,17 +49,17 @@ export function Body() {
       <div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.40.48.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.40.48.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.40.48.png" />
             <figcaption>Détection de lignes horizontales</figcaption>
           </figure>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.41.00.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.41.00.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.41.00.png" />
             <figcaption>Première partie de la segmentation</figcaption>
           </figure>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.41.09.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.41.09.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-22__19.41.09.png" />
             <figcaption>Seconde partie de la segmentation</figcaption>
           </figure>
         </div>
@@ -67,14 +69,14 @@ export function Body() {
       <div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png" />
             <figcaption>Détection des lignes</figcaption>
           </figure>
           <h3>1.4 Nettoyage de la segmentation</h3>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2023-07-27__20.29.31.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2023-07-27__20.29.31.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2023-07-27__20.29.31.png" />
             <figcaption>Quelques tranches de livre résultats</figcaption>
           </figure>
         </div>
@@ -83,13 +85,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.19.21.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.19.21.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.19.21.png" />
             <figcaption>Avant nettoyage</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.19.43.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.19.43.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.19.43.png" />
             <figcaption>Après nettoyage</figcaption>
           </figure>
         </div>
@@ -97,20 +99,20 @@ export function Body() {
       <h3>1.5 Extraction du texte</h3>
       <p>Une fois les tranches correctement isolées, l’étape suivante consistait à extraire le texte visible sur celles-ci. J’ai utilisé le moteur OCR Tesseract, appliqué sur plusieurs versions binarisées de chaque images de tranche, avec différents seuils de contraste. Cette approche multi-seuils permet de maximiser les chances d’extraire les informations utiles, en contournant les variations de qualité ou de lisibilité du texte imprimé.</p>
       <figure>
-        <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.55.15.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.55.15.png" /></a>
+        <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__12.55.15.png" />
         <figcaption>Image originale</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.55.54.png"><img src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.55.54.png" /></a>
+        <StaticImg src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.55.54.png" />
       </figure>
       <figure>
-        <a href="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_13.09.25.png"><img src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_13.09.25.png" /></a>
+        <StaticImg src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_13.09.25.png" />
       </figure>
       <figure>
-        <a href="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.55.47.png"><img src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.55.47.png" /></a>
+        <StaticImg src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.55.47.png" />
       </figure>
       <figure>
-        <a href="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.56.04.png"><img src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.56.04.png" /></a>
+        <StaticImg src="/images/projects/bookshelfAnalysis/Capture_decran_2021-06-23_a_12.56.04.png" />
         <figcaption>Image binaire avec différents seuils</figcaption>
       </figure>
       <p>Résultats obtenus :</p>
@@ -133,13 +135,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-24__15.00.32.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-24__15.00.32.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-24__15.00.32.png" />
             <figcaption>Avant application de la police</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-24__17.26.30.png"><img src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-24__17.26.30.png" /></a>
+            <StaticImg src="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-24__17.26.30.png" />
             <figcaption>Après application de la police</figcaption>
           </figure>
         </div>

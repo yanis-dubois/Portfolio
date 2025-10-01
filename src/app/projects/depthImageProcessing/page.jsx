@@ -8,7 +8,7 @@ export default function Home() {
       <Body/>
       <div className="grid gap-6 md:grid-cols-2">
         <Git url="https://github.com/Moustakick/Depth-Map-POC"/>
-        <PDF url="https://drive.google.com/file/d/1BdeK0goqTmyTdKlJyG5KzTgSa1N6fRAI/view?usp=share_link"/>
+        <PDF url="https://drive.google.com/file/d/1BdeK0goqTmyTdKlJyG5KzTgSa1N6fRAI/view?usp=sharing"/>
       </div>
     </ProjectsPage>
   );

@@ -15,9 +15,9 @@ export default function Home() {
           childStyle="relative h-screen flex flex-col items-center justify-center text-light text-center text-shadow-md/50"
         >
           <div>
-            <h1 className="text-8xl font-bold">Yanis Dubois</h1>
-            <p className="mt-4 text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
-            <nav className="pt-24 grid gap-6 md:grid-cols-3">
+            <h1 className="ml-4 mr-4 text-5xl sm:text-8xl font-bold">Yanis Dubois</h1>
+            <p className="mt-4 ml-4 mr-4 text-1xl sm:text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
+            <nav className="m-4 pt-20 grid gap-2 sm:gap-6 grid-cols-3">
               <TitleLinks url={"#about"} title="À propos"/>
               <TitleLinks url={"#projects"} title="Projets"/>
               <TitleLinks url={"#links"} title="Contact"/>
@@ -181,11 +181,11 @@ export default function Home() {
 
         {/* Projets Pro */}
         {/* --------------------------------------------------------------------------- */}
-        <Section id="projects" background="bg-dark-deep">
-          <h1 className="text-light text-3xl font-bold mb-12 mt-12 text-shadow-md/50">🖥️ Projets universitaires et professionnels</h1>
+        <Section id="projects" background="bg-dark-deep" body="flex flex-col items-center justify-center">
+          <h1 className="text-light text-2xl sm:text-3xl font-bold mb-12 mt-12 text-shadow-md/50">🖥️ Projets universitaires et professionnels</h1>
 
           <div className="grid gap-6 lg:grid-cols-2">
-            <Card variant="project" image="/images/projects/materialSimulation/result.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
+            <Card variant="project" image="/images/projects/materialSimulation/result.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="🦋 Simulation de matériaux bio-inspirés"
                 place="Inria, Bordeaux"
@@ -195,7 +195,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card variant="project" image="/images/projects/AR/XR_visulizer.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
+            <Card variant="project" image="/images/projects/AR/XR_visulizer.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="👓 Visualisation d’objets 3D en réalité mixte"
                 place="LaBRI, Bordeaux"
@@ -205,7 +205,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card variant="project" image="/images/projects/depthImageProcessing/indoorTotoro_mask.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
+            <Card variant="project" image="/images/projects/depthImageProcessing/indoorTotoro_mask.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="📷 Traitement d’images optiques 2.5D"
                 place="LaBRI, Bordeaux"
@@ -215,7 +215,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card variant="project" image="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
+            <Card variant="project" image="/images/projects/bookshelfAnalysis/Capture_dcran_2021-06-23__09.32.11.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="📚 Analyse de bibliothèque"
                 place="CNRS, Bordeaux"
@@ -229,12 +229,12 @@ export default function Home() {
 
         {/* Projets Perso */}
         {/* --------------------------------------------------------------------------- */}
-        <Section background="bg-dark-deep">
+        <Section background="bg-dark-deep" body="flex flex-col items-center justify-center">
           <hr className="border-light-dark" />
-          <h1 className="text-light text-3xl font-bold mb-12 mt-12 text-shadow-md/50">💻 Projets personnels</h1>
+          <h1 className="text-light text-2xl sm:text-3xl font-bold mb-12 mt-12 text-shadow-md/50">💻 Projets personnels</h1>
 
           <div className="grid gap-6 lg:grid-cols-2">
-            <Card variant="project" image="/images/projects/minecraftShader/galerie/surface/coverON.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
+            <Card variant="project" image="/images/projects/minecraftShader/galerie/surface/coverON.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="🌄 Développement de Shader"
                 date="Octobre 2024 - Juin 2025"
@@ -243,7 +243,7 @@ export default function Home() {
               />
             </Card>
 
-            <Card variant="project" image="/images/projects/videoGame/chronoCriminal.png" body="mx-auto w-128 lg:w-auto lg:mx-0">
+            <Card variant="project" image="/images/projects/videoGame/chronoCriminal.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="🎮 Création de jeu vidéo"
                 place="Guilde du dé libéré"
@@ -260,7 +260,7 @@ export default function Home() {
         <Section id="links" background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
             <Links emoji="📨" title="Envoyez-moi un e-mail →" url={"mailto:yanis.dubois117@gmail.com"}/>
-            <Links emoji="📄" title="Consultez mon CV →" url={""}/>
+            <Links emoji="📄" title="Consultez mon CV →" url={"https://drive.google.com/file/d/1koEXbVEppaWU3bWq0GV42aF6fWUn8PaT/view?usp=share_link"}/>
             <Links emoji="🌐" title="Accédez à mon GitHub →" url={"https://github.com/yanis-dubois"}/>
           </div>
         </Section>

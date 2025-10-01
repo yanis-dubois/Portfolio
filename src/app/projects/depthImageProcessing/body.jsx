@@ -1,3 +1,5 @@
+import {StaticImg} from "../../../utils/media.jsx"
+
 export function Body() {
   return (
     <div>
@@ -12,9 +14,7 @@ export function Body() {
         </div>
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/indoorTotoro_mask.png">
-              <img src="/images/projects/depthImageProcessing/indoorTotoro_mask.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/indoorTotoro_mask.png" />
           </figure>
         </div>
       </div>
@@ -29,17 +29,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/meeseeks.png">
-              <img src="/images/projects/depthImageProcessing/meeseeks.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/meeseeks.png" />
             <figcaption>Image originale</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/meeseeks_fog.png">
-              <img src="/images/projects/depthImageProcessing/meeseeks_fog.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/meeseeks_fog.png" />
             <figcaption>Ajout de brouillard</figcaption>
           </figure>
         </div>
@@ -50,17 +46,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/indoorTotoro_rescale.jpg">
-              <img src="/images/projects/depthImageProcessing/indoorTotoro_rescale.jpg" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/indoorTotoro_rescale.jpg" />
             <figcaption>Image de synthèse</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/indoorTotoro_mask.png">
-              <img src="/images/projects/depthImageProcessing/indoorTotoro_mask.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/indoorTotoro_mask.png" />
             <figcaption>Segmentation selon la profondeur</figcaption>
           </figure>
         </div>
@@ -70,17 +62,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/introspection.png">
-              <img src="/images/projects/depthImageProcessing/introspection.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/introspection.png" />
             <figcaption>Image originale</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/dof-p_introspection.png">
-              <img src="/images/projects/depthImageProcessing/dof-p_introspection.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/dof-p_introspection.png" />
             <figcaption>Ajout de l’effet de focus</figcaption>
           </figure>
         </div>
@@ -90,17 +78,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/reflexion.png">
-              <img src="/images/projects/depthImageProcessing/reflexion.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/reflexion.png" />
             <figcaption>Image originale</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/depthImageProcessing/light_reflexion.png">
-              <img src="/images/projects/depthImageProcessing/light_reflexion.png" />
-            </a>
+            <StaticImg src="/images/projects/depthImageProcessing/light_reflexion.png" />
             <figcaption>Ajustement de luminosité</figcaption>
           </figure>
         </div>

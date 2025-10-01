@@ -9,7 +9,7 @@ export default function Home() {
       
       <div className="grid gap-6 md:grid-cols-2">
         <Git url="https://gitlab.com/cgforbiology/ScalesInstantiator"/>
-        <PDF url="https://drive.google.com/file/d/1zqcUIODyrfzguURvbwEm8KH20yEnJ6D2/view?usp=share_link"/>
+        <PDF url="https://drive.google.com/file/d/1A0NbOEAv3ft5B_GCygAvZErcZi5LReBw/view?usp=sharing"/>
       </div>
     </ProjectsPage>
   );

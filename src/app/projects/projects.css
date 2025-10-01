@@ -66,17 +66,19 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 }
 
 .project figcaption {
 	color: var(--color-light-dark);
 	font-size: 85%;
 	margin-top: 0.5em;
+	max-height: 540px;
 }
 
 .project img:not(.fullsize) {
 	max-width: 100%;
-  max-height: 420px;
+  max-height: 540px;
 }
 
 .fullsize img {

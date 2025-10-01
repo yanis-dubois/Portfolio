@@ -3,7 +3,7 @@
 import { NavLinks } from "./staticUI.jsx"
 import { useEffect, useState, useRef } from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
+import {StaticImage} from "./media.jsx";
 
 export function Portal({ children, name }) {
   const [mounted, setMounted] = useState(false);
@@ -208,10 +208,27 @@ export function ImageComparison({ image, imageOff, imageOn }) {
   const handleDown = () => setIsDragging(true);
   const handleUp = () => setIsDragging(false);
 
+  // const handleMove = (event) => {
+  //   if (!isDragging) return;
+  //   const rect = event.currentTarget.getBoundingClientRect();
+  //   const x = event.clientX - rect.left;
+  //   const percent = (x / rect.width) * 100;
+  //   setPosition(Math.min(Math.max(percent, 0), 100));
+  // };
+
   const handleMove = (event) => {
     if (!isDragging) return;
     const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left;
+
+    let clientX;
+    if (event.type.startsWith("touch")) {
+      clientX = event.touches[0]?.clientX; // doigt principal
+    } else {
+      clientX = event.clientX; // souris
+    }
+
+    if (clientX == null) return;
+    const x = clientX - rect.left;
     const percent = (x / rect.width) * 100;
     setPosition(Math.min(Math.max(percent, 0), 100));
   };
@@ -221,23 +238,25 @@ export function ImageComparison({ image, imageOff, imageOn }) {
       className="relative w-full aspect-video"
       onMouseMove={handleMove}
       onMouseUp={handleUp}
+      onTouchMove={handleMove}
+      onTouchEnd={handleUp}
     >
       {/* after image */}
-      <Image 
+      <StaticImage 
         src={imageON}
         alt="on" 
         width={1728} 
         height={1080} 
-        className="fullsize absolute top-0 left-0 w-full h-full object-cover select-none"
+        className="fullsize absolute top-0 left-0 w-full h-full object-cover select-none pointer-events-none"
       />
 
       {/* before image  */}
-      <Image
+      <StaticImage
         src={imageOFF}
         alt="off"
         width={1728} 
         height={1080} 
-        className="fullsize absolute top-0 left-0 w-full h-full object-cover select-none"
+        className="fullsize absolute top-0 left-0 w-full h-full object-cover select-none pointer-events-none"
         style={{
           clipPath: `inset(0 ${100 - position}% 0 0)`,
         }}
@@ -257,6 +276,7 @@ export function ImageComparison({ image, imageOff, imageOn }) {
           transform: "translate(-50%, -50%)",
         }}
         onMouseDown={handleDown}
+        onTouchStart={handleDown}
       >
         <p>↔</p>
       </div>

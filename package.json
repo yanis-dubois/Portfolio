@@ -2,17 +2,18 @@
   "homepage": "https://yanis-dubois.github.io/Portfolio",
   "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d out"
+    "predeploy": "npm run build && next-export-optimize-images",
+    "deploy": "npm run build && next-export-optimize-images && gh-pages -d out --nojekyll"
   },
   "dependencies": {
     "next": "15.5.3",
+    "next-export-optimize-images": "^4.7.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

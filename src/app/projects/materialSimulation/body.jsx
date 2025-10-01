@@ -1,3 +1,5 @@
+import {StaticImg} from "../../../utils/media.jsx"
+
 export function Body() {
   return (
     <div>
@@ -12,9 +14,7 @@ export function Body() {
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/result.png">
-              <img src="/images/projects/materialSimulation/result.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/result.png"/>
           </figure>
         </div>
       </div>
@@ -25,9 +25,7 @@ export function Body() {
       <p>Ces ailes sont constituées de structures à différentes échelles : elles sont d’abord recouvertes d’écailles (mesurant entre 30 et 500 µm), elles-mêmes composées de crêtes microscopiques, dont la taille se compte en micromètres. Cette organisation particulière donne lieu à une grande variété d’effets optiques, tels que le crénelage, le tramage, le scintillement, l’anisotropie ou encore l’iridescence.</p>
       <p>L’objectif du stage était de concevoir une méthode permettant de reproduire ces effets visuels en modélisant les principales structures observées sur les ailes de papillons, à savoir les écailles et leurs crêtes. Pour cela, nous avons choisi d’utiliser Blender, un logiciel libre et open source, afin de tirer parti de ses capacités de génération procédurale de géométrie et de son moteur de rendu path-tracing, Cycles.</p>
       <figure>
-        <a href="/images/projects/materialSimulation/butterfly.png">
-          <img src="/images/projects/materialSimulation/butterfly.png" />
-        </a>
+        <StaticImg src="/images/projects/materialSimulation/butterfly.png"/>
         <figcaption>
           Ailes d’un papillon de l’espèce <em>Isostola Flavicollaris</em>
         </figcaption>
@@ -35,17 +33,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/scales.png">
-              <img src="/images/projects/materialSimulation/scales.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/scales.png"/>
             <figcaption>Écailles recouvrant les ailes</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/ridges.png">
-              <img src="/images/projects/materialSimulation/ridges.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/ridges.png"/>
             <figcaption>Structurations en crêtes recouvrant les écailles</figcaption>
           </figure>
         </div>
@@ -57,25 +51,19 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-3">
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/distrib_hexaJitter0.png">
-              <img src="/images/projects/materialSimulation/distrib_hexaJitter0.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/distrib_hexaJitter0.png"/>
             <figcaption>Distribution hexagonale</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/distrib_hexaJitter03.png">
-              <img src="/images/projects/materialSimulation/distrib_hexaJitter03.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/distrib_hexaJitter03.png"/>
             <figcaption>Distribution hexagonale avec de légères perturbations</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/distrib_hexaJitter1.png">
-              <img src="/images/projects/materialSimulation/distrib_hexaJitter1.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/distrib_hexaJitter1.png"/>
             <figcaption>Distribution hexagonale avec de fortes perturbations</figcaption>
           </figure>
         </div>
@@ -84,25 +72,19 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-3">
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/orientation_noise.png">
-              <img src="/images/projects/materialSimulation/orientation_noise.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/orientation_noise.png"/>
             <figcaption>Orientation</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/elevation_noise.png">
-              <img src="/images/projects/materialSimulation/elevation_noise.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/elevation_noise.png"/>
             <figcaption>Élévation</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/tilt_noise.png">
-              <img src="/images/projects/materialSimulation/tilt_noise.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/tilt_noise.png"/>
             <figcaption>Inclinaison</figcaption>
           </figure>
         </div>
@@ -111,26 +93,20 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/shadding_smooth.png">
-              <img src="/images/projects/materialSimulation/shadding_smooth.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/shadding_smooth.png" />
             <figcaption>Courbure</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/ridge_frequence.png">
-              <img src="/images/projects/materialSimulation/ridge_frequence.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/ridge_frequence.png" />
             <figcaption>Crêtes</figcaption>
           </figure>
         </div>
       </div>
       <p>En jouant sur la présence de différents types d’écailles lors de la distribution, il nous a été possible de reproduire deux effets optique que sont la tramage et le crénelage comme on peut le constater sur l’image suivante. </p>
       <figure>
-        <a href="/images/projects/materialSimulation/materialDistrib_result.png">
-          <img src="/images/projects/materialSimulation/materialDistrib_result.png" />
-        </a>
+        <StaticImg src="/images/projects/materialSimulation/materialDistrib_result.png" />
         <figcaption>Distribution de trois types d’écailles différentes</figcaption>
       </figure>
       <h2>Optimisation</h2>
@@ -139,25 +115,19 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-3">
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/POM.png">
-              <img src="/images/projects/materialSimulation/POM.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/POM.png" />
             <figcaption>POM sans ray-tracing</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/POM_plus.png">
-              <img src="/images/projects/materialSimulation/POM_plus.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/POM_plus.png" />
             <figcaption>POM avec ray-tracing</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/materialSimulation/ref.png">
-              <img src="/images/projects/materialSimulation/ref.png" />
-            </a>
+            <StaticImg src="/images/projects/materialSimulation/ref.png" />
             <figcaption>Référence</figcaption>
           </figure>
         </div>
@@ -177,15 +147,11 @@ export function Body() {
       </ul>
       <p>Voici des résultats obtenus nous permettant d’illustrer la présence de scintillement, d’anisotropie et d’iridescence :</p>
       <figure>
-        <a href="/images/projects/materialSimulation/glittering_30deg.png">
-          <img src="/images/projects/materialSimulation/glittering_30deg.png" />
-        </a>
+        <StaticImg src="/images/projects/materialSimulation/glittering_30deg.png" />
         <figcaption>Scintillement</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/materialSimulation/untitled.png">
-          <img src="/images/projects/materialSimulation/finalResult.png" />
-        </a>
+        <StaticImg src="/images/projects/materialSimulation/finalResult.png" />
         <figcaption>Anisotropie et iridescence</figcaption>
       </figure>
       <h1>Ressources supplémentaires</h1>

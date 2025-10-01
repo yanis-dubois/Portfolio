@@ -1,3 +1,5 @@
+import {StaticImg} from "../../../utils/media.jsx"
+
 export function Body() {
   return (
     <div>
@@ -10,7 +12,7 @@ export function Body() {
         </div>
         <div>
           <figure>
-            <a href="/images/projects/AR/XR_visulizer.png"><img src="/images/projects/AR/XR_visulizer.png" /></a>
+            <StaticImg src="/images/projects/AR/XR_visulizer.png" />
             <figcaption>Exemple de visualisation d’objets en réalité mixte</figcaption>
           </figure>
         </div>
@@ -33,13 +35,13 @@ export function Body() {
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/AR/sphere.jpg"><img src="/images/projects/AR/sphere.jpg" /></a>
+            <StaticImg src="/images/projects/AR/sphere.jpg" />
             <figcaption>Fichier OBJ simple importé dans la scène</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/AR/submesh.jpg"><img src="/images/projects/AR/submesh.jpg" /></a>
+            <StaticImg src="/images/projects/AR/submesh.jpg" />
             <figcaption>Fichier OBJ composé de plusieurs objets importé dans la scène</figcaption>
           </figure>
         </div>
@@ -49,11 +51,11 @@ export function Body() {
       <p>Ce système permet à un utilisateur d’examiner en réalité mixte des données médicales ou scientifiques issues de 3DSlicer, avec des possibilités d’interaction en temps réel.</p>
       <p>On peut voir sur les images présente ci-dessous, un exemple de données 3D visualisé depuis 3DSlicer, puis importé dans une scène de réalité mixte et manipulable par un utilisateur.</p>
       <figure>
-        <a href="/images/projects/AR/slicer.jpg"><img src="/images/projects/AR/slicer.jpg" /></a>
+        <StaticImg src="/images/projects/AR/slicer.jpg" />
         <figcaption>Fenêtre de 3DSlicer permettant le lancement d’un serveur OpenIGTLink (à gauche) et la visualisation de données 3D (à droite).</figcaption>
       </figure>
       <figure>
-        <a href="/images/projects/AR/hand.jpg"><img src="/images/projects/AR/hand.jpg" /></a>
+        <StaticImg src="/images/projects/AR/hand.jpg" />
         <figcaption>Maillage provenant de 3DSlicer importé dans une scène en réalité mixte</figcaption>
       </figure>
       <h2>Base commune</h2>
@@ -61,19 +63,19 @@ export function Body() {
       <p>Concernant les interactions, nous avons mis en place plusieurs fonctionnalités essentielles : déplacement, rotation, mise à l’échelle, affichage à taille réelle, et suppression des objets.</p>
       <p>Côté interface, différents éléments ont été intégrés pour faciliter l’usage : formulaire, clavier virtuel, et menu interactif adapté à une utilisation en réalité mixte.</p>
       <figure>
-        <a href="/images/projects/AR/607ee0ec-e73e-4cb4-b31d-00c9e7b7d77f.png"><img src="/images/projects/AR/607ee0ec-e73e-4cb4-b31d-00c9e7b7d77f.png" /></a>
+        <StaticImg src="/images/projects/AR/607ee0ec-e73e-4cb4-b31d-00c9e7b7d77f.png" />
         <figcaption>Utilisateur ayant rentré une URL à l’aide du clavier virtuel</figcaption>
       </figure>
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <figure>
-            <a href="/images/projects/AR/UI_SMB.png"><img src="/images/projects/AR/UI_SMB.png" /></a>
+            <StaticImg src="/images/projects/AR/UI_SMB.png" />
             <figcaption>Formulaire relatif à l’importation de fichier via SMB</figcaption>
           </figure>
         </div>
         <div>
           <figure>
-            <a href="/images/projects/AR/53ae139d-6913-4d1e-b8a8-5735b3d804cf.png"><img src="/images/projects/AR/53ae139d-6913-4d1e-b8a8-5735b3d804cf.png" /></a>
+            <StaticImg src="/images/projects/AR/53ae139d-6913-4d1e-b8a8-5735b3d804cf.png" />
             <figcaption>Menu principal</figcaption>
           </figure>
         </div>

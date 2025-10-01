@@ -14,11 +14,13 @@ export function ProjectsPage({ children, emoji, title }) {
           <Link href={"/"}>
             🏠 <span className="hover:underline hover:text-light">Accueil</span>
           </Link>
-          <span className="text-light-dark"> / </span>
-          <Link href={""}>
-            <span>{emoji} </span>
-            <span className="hover:underline hover:text-light">{title}</span>
-          </Link>
+          <div className="hidden md:inline">
+            <span className="text-light-dark"> / </span>
+            <Link href={""}>
+              <span>{emoji} </span>
+              <span className="hover:underline hover:text-light">{title}</span>
+            </Link>
+          </div>
         </div>
         <div className="pr-2">
           <ProjectsNav/>
@@ -30,7 +32,7 @@ export function ProjectsPage({ children, emoji, title }) {
       {/* --------------------------------------------------------------------------- */}
       <header className="bg-dark-soft text-light">
         <Section>
-          <h1 className="text-5xl font-bold text-center">{emoji} {title}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-center">{emoji} {title}</h1>
         </Section>
       </header>
 

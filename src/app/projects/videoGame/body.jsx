@@ -1,3 +1,5 @@
+import {StaticImg} from "../../../utils/media.jsx"
+
 export function Body() {
   return (
     <div>
@@ -9,9 +11,7 @@ export function Body() {
         </div>
         <div>
           <figure>
-            <a href="/images/projects/videoGame/chronoCriminal.png">
-              <img src="/images/projects/videoGame/chronoCriminal.png" />
-            </a>
+            <StaticImg src="/images/projects/videoGame/chronoCriminal.png" />
           </figure>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import {StaticImage} from "./media.jsx";
 
 export function Section({ children, background = "", body = "", image = "", id }) {
   return (
@@ -45,7 +45,7 @@ export function Card({ children, title, titleStyle = "", body = "", variant = "o
     return (
       <div className={styles[variant]}>
         <div className="relative">
-          <Image src={image} alt="" width={500} height={200} className="w-full h-78 object-cover rounded-t-2xl" />
+          <StaticImage src={image} alt="" width={500} height={200} className="w-full h-78 object-cover rounded-t-2xl" />
         </div>
         <div className="p-6">{children}</div>
       </div>
@@ -64,11 +64,11 @@ export function Card({ children, title, titleStyle = "", body = "", variant = "o
 export function Projects({ title, place, date, keywords, pageLink }) {
   return (
     <div>
-      {title && <h2 className="text-light text-xl font-bold text-shadow-md/50">{title}</h2>}
+      {title && <h2 className="text-light text-lg md:text-xl font-bold text-shadow-md/50">{title}</h2>}
 
-      <div className="flex pt-2 pb-2">
+      <div className="flex flex-wrap pt-2 pb-2">
         {keywords.map((word, index) => (
-          <p key={index} className="pr-1">
+          <p key={index} className="pr-1 pt-1">
             <code className="px-2 py-1 bg-dark-soft text-primary-dark rounded-md font-mono text-sm">{word}</code>
           </p>
         ))}
@@ -79,7 +79,7 @@ export function Projects({ title, place, date, keywords, pageLink }) {
           {place && <p>📍 {place}</p>}
           <p className="text-light-dark">📅 {date}</p>
         </div>
-        <Button link={pageLink} variant="colored" bodyStyle="ml-auto">
+        <Button link={pageLink} variant="colored" bodyStyle="ml-auto min-w-24">
           Voir plus
         </Button>
       </div>
@@ -125,7 +125,7 @@ export function Links({ emoji, icon, title, url, type = "emoji" }) {
     : (
       <div className="font-bold text-light text-center">
         <Link href={url} className="flex justify-center items-center">
-          <Image src={icon} alt="" width={32} height={32} className="w-[1rem] h-[1rem]" />
+          <StaticImage src={icon} alt="" width={32} height={32} className="w-[1rem] h-[1rem]" />
           &nbsp;<span className="underline">{title}</span>
         </Link>
       </div>
@@ -144,7 +144,7 @@ export function NavLinks({ emoji, icon, title, url, type = "emoji" }) {
 
 export function TitleLinks({ emoji, icon, title, url, type = "emoji" }) {
   return (
-      <div className="text-light-soft text-3xl">
+      <div className="text-light-soft text-2xl md:text-3xl">
         <Link href={url}>
           {emoji} <span className="hover:text-light">{title}</span>
         </Link>
@@ -179,7 +179,7 @@ export function Background({ children, src, parentStyle, childStyle }) {
 
       {/* Background */}
       <div className="fixed inset-0 -z-1" >
-        <Image src={src} alt="" fill className="object-cover"/>
+        <StaticImage src={src} alt="" fill className="object-cover"/>
       </div>
 
       {/* Children */}
