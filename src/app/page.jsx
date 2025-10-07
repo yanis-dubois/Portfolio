@@ -10,7 +10,7 @@ export default function Home() {
       {/* --------------------------------------------------------------------------- */}
       <header>
         <Background 
-          src="/images/background/monolyth.png" 
+          src="/images/background/background.png" 
           parentStyle="h-screen flex items-center justify-center" 
           childStyle="relative h-screen flex flex-col items-center justify-center text-light text-center text-shadow-md/50"
         >

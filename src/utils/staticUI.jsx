@@ -156,7 +156,7 @@ export function Footer() {
   return (
     <footer className="bg-dark-soft p-6 text-center text-sm text-light-dark">
       © 2025 Yanis Dubois — Libre et Open Source, hébergé via GitHub Pages<br/>
-      Crédits : image #Compétences - Unsplash ; image #Loisirs - Scavengers Reign par Joseph Bennett et Charles Huettner
+      Crédits : images #Titre et #Compétences - Unsplash ; image #Loisirs - Scavengers Reign par Joseph Bennett et Charles Huettner
     </footer>
   );
 }
