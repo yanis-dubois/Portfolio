@@ -237,7 +237,7 @@ export default function Home() {
             <Card variant="project" image="/images/projects/minecraftShader/galerie/surface/coverON.png" body="mx-auto w-auto sm:mx-0">
               <Projects
                 title="🌄 Développement de Shader"
-                date="Octobre 2024 - Juin 2025"
+                date="Octobre 2024 - Août 2025"
                 keywords={["Game Development", "Real Time Rendering", "OpenGL"]}
                 pageLink="/projects/minecraftShader"
               />

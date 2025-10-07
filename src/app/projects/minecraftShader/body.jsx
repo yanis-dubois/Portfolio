@@ -812,10 +812,6 @@ export function Body() {
         <figcaption>Nether : deltas de basalte (sans / avec)</figcaption>
       </figure>
       <figure>
-        <ImageComparison image="/images/projects/minecraftShader/galerie/nether/nethersoul" />
-        <figcaption>Nether : vallée des âmes (sans / avec)</figcaption>
-      </figure>
-      <figure>
         <ImageComparison image="/images/projects/minecraftShader/galerie/end/endcity" />
         <figcaption>End : cité (sans / avec)</figcaption>
       </figure>
