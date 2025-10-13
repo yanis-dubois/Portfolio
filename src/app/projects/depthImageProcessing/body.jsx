@@ -15,6 +15,7 @@ export function Body() {
         <div>
           <figure>
             <StaticImg src="/images/projects/depthImageProcessing/indoorTotoro_mask.png" />
+            <figcaption>Exemple de segmentation d'image via la profondeur</figcaption>
           </figure>
         </div>
       </div>

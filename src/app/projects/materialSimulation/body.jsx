@@ -15,6 +15,7 @@ export function Body() {
         <div>
           <figure>
             <StaticImg src="/images/projects/materialSimulation/result.png"/>
+            <figcaption>Simulation d'une aile de papillon du genre <em>Morpho</em></figcaption>
           </figure>
         </div>
       </div>

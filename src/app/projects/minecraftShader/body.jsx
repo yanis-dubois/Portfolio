@@ -14,9 +14,10 @@ export function Body() {
           <p>Ce projet a pour objectif de moderniser l’esthétique visuelle du jeu tout en me permettant d’explorer et d’approfondir les techniques de rendu 3D en temps réel.</p>
         </div>
         <div>
-          <figure>
-            <StaticImg src="/images/projects/minecraftShader/galerie/surface/coverON.png" />
-          </figure>
+        <figure>
+          <ImageComparison image="/images/projects/minecraftShader/galerie/surface/cover" />
+          <figcaption>Image du jeu (original à gauche / avec mon shader à droite)</figcaption>
+        </figure>
         </div>
       </div>
       <hr />

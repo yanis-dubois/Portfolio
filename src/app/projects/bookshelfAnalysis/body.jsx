@@ -13,6 +13,7 @@ export function Body() {
         <div>
           <figure>
             <StaticImg src="/images/projects/bookshelfAnalysis/lineDetect.png" />
+            <figcaption>Exemple de détection de ligne sur une image de bibliothèque</figcaption>
           </figure>
         </div>
       </div>
