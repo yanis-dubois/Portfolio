@@ -260,7 +260,7 @@ export default function Home() {
         <Section id="links" background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
             <Links emoji="📨" title="Envoyez-moi un e-mail →" url={"mailto:yanis.dubois117@gmail.com"}/>
-            <Links emoji="📄" title="Consultez mon CV →" url={"https://drive.google.com/file/d/1v_GVBZSExzSQNoPiIaoQm4zsZ4Lf6JsE/view?usp=share_link"}/>
+            <Links emoji="📄" title="Consultez mon CV →" url={"https://drive.google.com/file/d/1JTB2Y5I5ullVGqRbzys1rdFn05QCKoI6/view?usp=share_link"}/>
             <Links emoji="🌐" title="Accédez à mon GitHub →" url={"https://github.com/yanis-dubois"}/>
           </div>
         </Section>
