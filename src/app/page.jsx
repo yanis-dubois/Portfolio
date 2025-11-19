@@ -16,7 +16,7 @@ export default function Home() {
         >
           <div>
             <h1 className="ml-4 mr-4 text-5xl sm:text-8xl font-bold">Yanis Dubois</h1>
-            <p className="mt-4 ml-4 mr-4 text-1xl sm:text-3xl">Développeur spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
+            <p className="mt-4 ml-4 mr-4 text-1xl sm:text-3xl">Développeur logiciel spécialisé dans le traitement, l’analyse, et la synthèse d’images et de sons</p>
             <nav className="m-4 pt-20 grid gap-2 sm:gap-6 grid-cols-3">
               <TitleLinks url={"#about"} title="À propos"/>
               <TitleLinks url={"#projects"} title="Projets"/>
@@ -43,15 +43,14 @@ export default function Home() {
             <div className="md:col-span-3">
               <h2 className="text-light text-4xl font-bold mb-4 mt-4 text-shadow-md/50">👤 Présentation</h2>
               <p className="mb-4 text-justify">
-                Diplômé d’un <span className="text-primary-light font-bold">master en informatique</span>, je suis fasciné par les différentes applications que l’on peut donner aux mathématiques. C’est l’aspect <span className="text-light">concret</span> de l’informatique que j’aime, cette capacité à transformer des concepts abstraits en outils <span className="text-light">efficaces</span> et <span className="text-light">fonctionnels</span>.
+                Diplômé d’un <span className="text-primary-light font-bold">master en informatique</span>, j’aime concevoir des solutions logicielles polyvalentes : applications de <span className="text-primary-light">bureau</span>, sites <span className="text-primary-light">web</span> ou applications <span className="text-primary-light">mobiles</span>. Qu’il s’agisse d’imaginer une <span className="text-light">interface</span> utilisateur intuitive, de structurer une <span className="text-light">architecture</span> logicielle maintenable ou d’assurer la <span className="text-light">qualité</span> et la <span className="text-light">performance</span> d’une application, je prends plaisir à développer des outils <span className="text-light">concrets</span> et <span className="text-light">utiles</span>.
               </p>
               <p className="mb-4 text-justify">
                 J’apprécie la manipulation de structures de données et d’objets mathématiques <span className="text-primary-light font-bold">originaux</span> tels que dans la <span className="text-light">théorie des graphes</span>, la manipulation de <span className="text-light">maillages</span>, ou encore la conception d’algorithmes <span className="text-light">distribués</span> ou <span className="text-light">parallèles</span>. 
               </p>
               <p className="mb-4 text-justify">
-                Ma <span className="text-light">spécialisation de master</span> m’a permis de me former en profondeur à des domaines qui me passionnent aujourd’hui : 
-                la <span className="italic text-primary-light">computer graphics</span> – au travers du rendu réaliste ou expressif, via <span className="text-light italic">rasterisation</span> pour les rendus temps réel ou <span className="text-light italic">pathtracing</span> pour les rendus plus précis ; 
-                et la <span className="italic text-primary-light">computer vision</span> – via le traitement et l’analyse de signaux, notamment avec des méthodes de <span className="text-light italic">machine learning</span>.
+                Ma <span className="text-light">spécialisation de master</span> m’a permis de me former en profondeur à des domaines qui me passionnent aujourd’hui. 
+                Dont <span className="text-primary-light">l'informatique graphique</span> au travers du rendu réaliste ou expressif, via <span className="text-light italic">rasterisation</span> pour les rendus temps réel ou <span className="text-light italic">pathtracing</span> pour les rendus plus précis. Et la <span className="text-primary-light">vision par ordinateur</span> via le traitement et l’analyse de signaux, notamment avec des méthodes de <span className="text-light italic">machine learning</span>.
               </p>
             </div>
 
@@ -93,13 +92,13 @@ export default function Home() {
           childStyle=""
         >
           <Section>
-            <h1 className="text-center text-light text-4xl font-bold mb-12 text-shadow-md/50">⚙️ Compétences</h1>
+            <h1 className="text-center text-light text-4xl font-bold mt-6 mb-12 text-shadow-md/50">⚙️ Compétences</h1>
             <div className="grid gap-6 lg:grid-cols-3">
 
               <Card title="🛠️ Techniques" variant="translucent" body="max-w-96 mx-auto">
                 <p className="mb-2">
                   <span className="text-primary-light font-bold">Langages, bibliothèques et API</span><br/>
-                  <span className="text-light">Algorithme :</span> C, C++, C#, Java, Python, OpenGL.<br/>
+                  <span className="text-light">Algorithme :</span> C, C++, C#, GLSL, Java, Python, Bash.<br/>
                   <span className="text-light">Web :</span> HTML, CSS, JavaScript, React.<br/>
                   <span className="text-light">Base de donnée :</span> SQL.<br/>
                   <span className="text-light">Modélisation :</span> UML.
@@ -107,20 +106,23 @@ export default function Home() {
                 <p className="">
                   <span className="text-primary-light font-bold">Environnements</span><br/>
                   <span className="text-light">Framework :</span> VS Code, IntelliJ, Anaconda, Android Studio, Visual Studio.<br/>
-                  <span className="text-light">Outil de gestion de versions :</span> Git.<br/>
+                  <span className="text-light">Outils :</span> Git, JUnit, Maven, Gradle.<br/>
                   <span className="text-light">Moteurs de rendus :</span> Godot, Unity, Blender.<br/>
                 </p>
               </Card>
 
               <Card title="🎯 Domaines d’application" variant="translucent" body="max-w-96 mx-auto">
                 <p className="mb-2">
-                  <span className="text-primary-light font-bold">Synthèse d’image :</span> path-tracing, rastérisation, fonctions d’apparences (BSDF), modélisation géométrique, pipeline graphique.
+                  <span className="text-primary-light font-bold">Développement logiciel :</span><br/>
+                  Conception, développement, test et optimisation de logiciels, sites web et applications mobiles.
                 </p>
                 <p className="mb-2">
-                  <span className="text-primary-light font-bold">Traitement d’image :</span> outils statistiques, filtres fréquentiels, transformations morphologiques, convolution, espaces colorimétriques.
+                  <span className="text-primary-light font-bold">Informatique graphique :</span><br/>
+                  Manipulation, visualisation ou synthèse de données dans un contexte scientifique, technique ou artistique.
                 </p>
                 <p className="">
-                  <span className="text-primary-light font-bold">Intelligence Artificielle :</span> analyse, traitement et génération de données; explicabilité et analyse qualitative de modèles.
+                  <span className="text-primary-light font-bold">Vision par ordinateur :</span><br/>
+                  Acquisition, reconstruction, traitement et analyse de données pour l'aide à la décision ou l'automatisation de système. 
                 </p>
               </Card>
 
@@ -145,7 +147,7 @@ export default function Home() {
           childStyle=""
         >
           <Section>
-            <h1 className="text-center text-light text-4xl font-bold mb-12 text-shadow-md/50">🎲 Loisirs</h1>
+            <h1 className="text-center text-light text-4xl font-bold mt-6 mb-12 text-shadow-md/50">🎲 Loisirs</h1>
             <div className="grid gap-6 lg:grid-cols-3">
 
               <Card title="🎵 Musique" variant="translucent" body="max-w-96 mx-auto">
@@ -227,6 +229,8 @@ export default function Home() {
           </div>
         </Section>
 
+        <hr className="border-dark-soft mt-4 mx-auto max-w-5xl"/>
+
         {/* Projets Perso */}
         {/* --------------------------------------------------------------------------- */}
         <Section background="bg-dark-deep" body="flex flex-col items-center justify-center">
@@ -260,7 +264,7 @@ export default function Home() {
         <Section id="links" background="bg-dark">
           <div className="grid gap-6 md:grid-cols-3">
             <Links emoji="📨" title="Envoyez-moi un e-mail →" url={"mailto:yanis.dubois117@gmail.com"}/>
-            <Links emoji="📄" title="Consultez mon CV →" url={"https://drive.google.com/file/d/1JTB2Y5I5ullVGqRbzys1rdFn05QCKoI6/view?usp=share_link"}/>
+            <Links emoji="📄" title="Consultez mon CV →" url={"https://drive.google.com/file/d/1Vp4hFvWvscl07k5F2zZBOFksgeXfyXIG/view?usp=share_link"}/>
             <Links emoji="🌐" title="Accédez à mon GitHub →" url={"https://github.com/yanis-dubois"}/>
           </div>
         </Section>
