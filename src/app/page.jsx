@@ -50,7 +50,7 @@ export default function Home() {
               </p>
               <p className="mb-4 text-justify">
                 Ma <span className="text-light">spécialisation de master</span> m’a permis de me former en profondeur à des domaines qui me passionnent aujourd’hui. 
-                Dont <span className="text-primary-light">l'informatique graphique</span> au travers du rendu réaliste ou expressif, via <span className="text-light italic">rasterisation</span> pour les rendus temps réel ou <span className="text-light italic">pathtracing</span> pour les rendus plus précis. Et la <span className="text-primary-light">vision par ordinateur</span> via le traitement et l’analyse de signaux, notamment avec des méthodes de <span className="text-light italic">machine learning</span>.
+                Dont notamment <span className="text-primary-light">l'informatique graphique</span> au travers du rendu réaliste ou expressif, via <span className="text-light italic">rasterisation</span> pour les rendus temps réel ou <span className="text-light italic">pathtracing</span> pour les rendus plus précis. Ainsi que la <span className="text-primary-light">vision par ordinateur</span> via le traitement et l’analyse de signaux, notamment avec des méthodes de <span className="text-light italic">machine learning</span>.
               </p>
             </div>
 
